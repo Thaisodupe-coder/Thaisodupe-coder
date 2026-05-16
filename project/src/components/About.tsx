@@ -54,6 +54,8 @@ export default function About() {
             <p className="text-sm leading-relaxed text-slate-400">
               Công nghệ thông tin<br />
               UET - VNU
+              Ngành Công nghệ thông tin<br />
+              Khóa K70 | UET - VNU
             </p>
           </div>
 
@@ -90,6 +92,7 @@ export default function About() {
             </h3>
             <p className="pl-8 text-slate-400 leading-relaxed">
               Khát vọng xây dựng những "xương sống" công nghệ bền vững trong vai trò Software Architect kết hợp DevOps tương lai.
+              Phát triển chuyên môn sâu để trở thành Software Architect kết hợp DevOps. Trọng tâm song song là rèn luyện kỹ năng làm việc nhóm (teamwork) và nâng cao năng lực giao tiếp, đàm phán với khách hàng.
             </p>
           </div>
         </div>
