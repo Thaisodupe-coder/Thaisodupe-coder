@@ -24,6 +24,7 @@ export interface Project {
   objective: string;
   sections: ProjectSection[];
   tags?: string[];
+  reportFile?: string;
 }
 
 export const projects: Project[] = [
@@ -57,6 +58,7 @@ export const projects: Project[] = [
       },
     ],
     tags: ['File System', 'PascalCase', 'Windows', 'Organization'],
+    reportFile: '/reports/bai1.docx',
   },
   {
     id: 'bai2',
@@ -87,6 +89,7 @@ export const projects: Project[] = [
       },
     ],
     tags: ['Google Scholar', 'IEEE', 'Java', 'OOP', 'Research'],
+    reportFile: '/reports/bao-cao-bai-tap.pdf',
   },
   {
     id: 'bai3',
@@ -115,6 +118,7 @@ export const projects: Project[] = [
       },
     ],
     tags: ['Prompt Engineering', 'ChatGPT', 'JavaFX', 'LaTeX', 'JVM'],
+    reportFile: '/reports/nguyenquocthai_25020389.pdf',
   },
   {
     id: 'bai4',
@@ -149,6 +153,7 @@ export const projects: Project[] = [
       },
     ],
     tags: ['Trello', 'Discord', 'Google Workspace', 'Kanban', 'Async'],
+    reportFile: '/reports/nguyen-quoc-thai_25020389.docx',
   },
   {
     id: 'bai5',
@@ -177,6 +182,7 @@ export const projects: Project[] = [
       },
     ],
     tags: ['Gemini', 'DALL-E 3', 'Canva AI', 'Java 25', 'Infographic'],
+    reportFile: '/reports/bao-cao-bai-tap-lon.docx',
   },
   {
     id: 'bai6',
@@ -200,5 +206,6 @@ export const projects: Project[] = [
       },
     ],
     tags: ['AI Ethics', 'Academic Integrity', 'Best Practices', 'ReentrantLock'],
+    reportFile: '/reports/bc-su-dung-ai-co-trach-nhiem-va-dao-duc.docx',
   },
 ];
