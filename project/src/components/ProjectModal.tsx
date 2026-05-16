@@ -93,7 +93,13 @@ export default function ProjectModal({ project, onClose }: Props) {
           {project.reportFile && (
             <div className="mt-8 flex justify-center border-t border-white/10 pt-6">
               <a
-                href={project.reportFile}
+                href={
+                  project.reportFile.endsWith('.docx')
+                    ? `https://docs.google.com/viewer?url=${encodeURIComponent(
+                        'https://thaisodupe-coder.github.io' + project.reportFile
+                      )}`
+                    : project.reportFile
+                }
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 rounded-lg bg-violet-600 px-6 py-3 font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.6)]"

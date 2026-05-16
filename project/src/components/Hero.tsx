@@ -1,4 +1,4 @@
-import { Mail, Phone, Github, GraduationCap } from 'lucide-react';
+import { Mail, Phone, Github, Facebook, GraduationCap } from 'lucide-react';
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -15,9 +15,13 @@ export default function Hero() {
           <div className="pointer-events-none absolute top-1/4 left-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/10 blur-[100px]" />
 
           <div className="fade-in-up">
-            {/* Icon/Logo */}
-            <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/20 text-violet-400 border border-violet-500/30">
-              <GraduationCap size={28} />
+            {/* Icon/Logo UET */}
+            <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-white p-1.5 border border-violet-500/30 shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-transform hover:scale-105">
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_of_VNU_University_of_Engineering_and_Technology.svg" 
+                alt="UET Logo" 
+                className="h-full w-full object-contain"
+              />
             </div>
 
             {/* Tiêu đề chính */}
@@ -51,6 +55,9 @@ export default function Hero() {
                   <span>0978474084</span>
                 </li>
                 <li className="flex items-center gap-4 pt-2">
+                  <a href="https://www.facebook.com/thaisodupee/" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
+                    <Facebook size={20} />
+                  </a>
                   <a href="https://github.com/Thaisodupe-coder/Thaisodupe-coder.github.io" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
                     <Github size={20} />
                   </a>
