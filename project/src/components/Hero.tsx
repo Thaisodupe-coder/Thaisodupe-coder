@@ -1,118 +1,92 @@
-import { useEffect, useState } from 'react';
-import { MapPin, BookOpen, ChevronDown } from 'lucide-react';
-
-const typewriterPhrases = [
-  'Software Architect',
-  'DevOps Engineer',
-  'System Designer',
-  'Problem Solver',
-];
+import { Mail, Phone, Linkedin, Github, GraduationCap } from 'lucide-react';
 
 export default function Hero() {
-  const [phraseIndex, setPhraseIndex] = useState(0);
-  const [displayed, setDisplayed] = useState('');
-  const [deleting, setDeleting] = useState(false);
-
-  useEffect(() => {
-    const phrase = typewriterPhrases[phraseIndex];
-    let timeout: ReturnType<typeof setTimeout>;
-
-    if (!deleting && displayed.length < phrase.length) {
-      timeout = setTimeout(() => setDisplayed(phrase.slice(0, displayed.length + 1)), 80);
-    } else if (!deleting && displayed.length === phrase.length) {
-      timeout = setTimeout(() => setDeleting(true), 1800);
-    } else if (deleting && displayed.length > 0) {
-      timeout = setTimeout(() => setDisplayed(displayed.slice(0, -1)), 45);
-    } else if (deleting && displayed.length === 0) {
-      setDeleting(false);
-      setPhraseIndex((i) => (i + 1) % typewriterPhrases.length);
-    }
-
-    return () => clearTimeout(timeout);
-  }, [displayed, deleting, phraseIndex]);
-
-  const scrollToProjects = () => {
-    document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+  const scrollTo = (id: string) => {
+    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section
-      id="hero"
-      className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 pt-20"
-    >
-      {/* Background grid */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            'linear-gradient(rgba(14,165,233,0.8) 1px, transparent 1px), linear-gradient(90deg, rgba(14,165,233,0.8) 1px, transparent 1px)',
-          backgroundSize: '64px 64px',
-        }}
-      />
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-[#0d1117]">
+      <div className="grid lg:grid-cols-2 min-h-screen">
+        
+        {/* Cột trái: Thông tin */}
+        <div className="relative z-10 flex flex-col justify-center px-8 py-24 lg:px-16 xl:px-24">
+          {/* Glow effect */}
+          <div className="pointer-events-none absolute top-1/4 left-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/10 blur-[100px]" />
 
-      {/* Glow orbs */}
-      <div className="pointer-events-none absolute top-1/3 left-1/4 h-80 w-80 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-500/5 blur-3xl" />
-      <div className="pointer-events-none absolute bottom-1/3 right-1/4 h-64 w-64 rounded-full bg-orange-500/5 blur-3xl" />
+          <div className="fade-in-up">
+            {/* Icon/Logo */}
+            <div className="mb-6 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-violet-500/20 text-violet-400 border border-violet-500/30">
+              <GraduationCap size={28} />
+            </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        {/* Status badge */}
-        <div className="fade-in-up mb-8 inline-flex items-center gap-2 rounded-full border border-sky-900/60 bg-sky-950/30 px-4 py-1.5">
-          <span className="h-2 w-2 rounded-full bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)]" />
-          <span className="font-mono text-xs text-sky-400">K70 · UET - ĐHQGHN · 2025</span>
+            {/* Tiêu đề chính */}
+            <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
+              Xin chào, tôi là <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-sky-400">
+                Nguyễn Quốc Thái
+              </span>
+            </h1>
+
+            {/* Tiêu đề phụ */}
+            <p className="mb-8 text-lg italic text-slate-400 max-w-lg leading-relaxed">
+              "Một 'tân binh' đầy tham vọng tại K70 ngành Công nghệ Thông tin, UET."
+            </p>
+
+            {/* Divider */}
+            <div className="mb-8 h-px w-full max-w-md bg-gradient-to-r from-white/20 to-transparent" />
+
+            {/* Thông tin liên hệ */}
+            <div className="mb-10">
+              <h3 className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-slate-300 underline decoration-violet-500/50 decoration-2 underline-offset-8">
+                Thông tin liên hệ
+              </h3>
+              <ul className="space-y-3 mt-4">
+                <li className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white">
+                  <Mail size={18} className="text-violet-400" />
+                  <span>nguyenquocthai@vnu.edu.vn</span>
+                </li>
+                <li className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white">
+                  <Phone size={18} className="text-violet-400" />
+                  <span>(+84) 123 456 789</span>
+                </li>
+                <li className="flex items-center gap-4 pt-2">
+                  <a href="#" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href="#" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
+                    <Github size={20} />
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* 3 Nút bấm */}
+            <div className="flex flex-wrap gap-4">
+              <button onClick={() => scrollTo('about')} className="rounded-lg bg-violet-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+                Bản thân
+              </button>
+              <button onClick={() => scrollTo('projects')} className="rounded-lg bg-violet-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+                Dự án
+              </button>
+              <button onClick={() => scrollTo('summary')} className="rounded-lg bg-violet-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+                Tổng kết
+              </button>
+            </div>
+          </div>
         </div>
 
-        {/* Name */}
-        <h1 className="fade-in-up fade-in-up-delay-1 mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-          Nguyễn Quốc Thái
-        </h1>
-
-        {/* Typewriter */}
-        <div className="fade-in-up fade-in-up-delay-2 mb-6 flex items-center justify-center gap-2">
-          <span className="font-mono text-lg text-slate-500 sm:text-xl">~/future/</span>
-          <span className="font-mono text-lg font-medium text-orange-400 sm:text-xl">{displayed}</span>
-          <span className="cursor-blink font-mono text-lg text-orange-400 sm:text-xl">|</span>
+        {/* Cột phải: Hình ảnh chân dung */}
+        <div className="relative h-96 w-full lg:h-screen lg:min-h-screen">
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
+            alt="Chân dung Nguyễn Quốc Thái"
+            className="h-full w-full object-cover object-center"
+          />
+          {/* Lớp phủ gradient để hòa trộn ảnh vào background tối */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/40 to-transparent lg:bg-gradient-to-r lg:from-[#0d1117] lg:via-[#0d1117]/50 lg:to-transparent" />
         </div>
 
-        {/* Description */}
-        <p className="fade-in-up fade-in-up-delay-3 mx-auto mb-8 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-          Sinh viên ngành{' '}
-          <span className="text-sky-400 font-medium">Công nghệ Thông tin</span> với định hướng
-          trở thành{' '}
-          <span className="text-orange-400 font-medium">Software Architect + DevOps</span> —
-          thiết kế kiến trúc, vận hành hệ thống và sử dụng AI có trách nhiệm.
-        </p>
-
-        {/* Meta chips */}
-        <div className="fade-in-up fade-in-up-delay-4 mb-10 flex flex-wrap items-center justify-center gap-3">
-          <span className="flex items-center gap-1.5 text-sm text-slate-500">
-            <MapPin size={14} className="text-sky-500" />
-            Hà Nội, Việt Nam
-          </span>
-          <span className="h-4 w-px bg-white/10" />
-          <span className="flex items-center gap-1.5 text-sm text-slate-500">
-            <BookOpen size={14} className="text-sky-500" />
-            MSV: 25020389
-          </span>
-          <span className="h-4 w-px bg-white/10" />
-          <span className="tag">Nhập môn CN Số & AI</span>
-        </div>
-
-        {/* CTA */}
-        <div className="fade-in-up fade-in-up-delay-5 flex flex-wrap items-center justify-center gap-4">
-          <button
-            onClick={scrollToProjects}
-            className="group flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-2.5 text-sm font-semibold text-white transition-all duration-200 hover:bg-sky-400 hover:shadow-[0_0_20px_rgba(14,165,233,0.4)]"
-          >
-            Xem Dự án
-            <ChevronDown size={16} className="transition-transform group-hover:translate-y-0.5" />
-          </button>
-        </div>
-      </div>
-
-      {/* Scroll hint */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-slate-600">
-        <span className="text-xs font-mono">scroll</span>
-        <div className="h-8 w-px bg-gradient-to-b from-slate-600 to-transparent" />
       </div>
     </section>
   );

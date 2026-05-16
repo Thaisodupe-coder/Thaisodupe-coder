@@ -3,6 +3,7 @@ import { Terminal } from 'lucide-react';
 
 const sections = [
   { id: 'hero', label: 'Giới thiệu' },
+  { id: 'about', label: 'Bản thân' },
   { id: 'projects', label: 'Dự án' },
   { id: 'summary', label: 'Tổng kết' },
 ];
