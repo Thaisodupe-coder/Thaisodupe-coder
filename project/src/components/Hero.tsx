@@ -44,11 +44,11 @@ export default function Hero() {
               <ul className="space-y-3 mt-4">
                 <li className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white">
                   <Mail size={18} className="text-violet-400" />
-                  <span>nguyenquocthai@vnu.edu.vn</span>
+                  <span>25020389@vnu.edu.vn</span>
                 </li>
                 <li className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white">
                   <Phone size={18} className="text-violet-400" />
-                  <span>(+84) 123 456 789</span>
+                  <span>0978474084</span>
                 </li>
                 <li className="flex items-center gap-4 pt-2">
                   <a href="#" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
@@ -79,8 +79,8 @@ export default function Hero() {
         {/* Cột phải: Hình ảnh chân dung */}
         <div className="relative h-96 w-full lg:h-screen lg:min-h-screen">
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
-            alt="Chân dung Nguyễn Quốc Thái"
+            src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1000&auto=format&fit=crop"
+            alt="Công nghệ thông tin"
             className="h-full w-full object-cover object-center"
           />
           {/* Lớp phủ gradient để hòa trộn ảnh vào background tối */}
