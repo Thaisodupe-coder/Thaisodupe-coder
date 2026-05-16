@@ -49,8 +49,8 @@ export default function Navbar() {
           onClick={() => scrollTo('hero')}
           className="flex items-center gap-2 text-sky-400 transition-opacity hover:opacity-80"
         >
-          <Terminal size={18} />
-          <span className="font-mono text-sm font-medium tracking-wider text-sky-400">
+          <Terminal size={24} />
+          <span className="font-mono text-base font-medium tracking-wider text-sky-400">
             NQT<span className="text-orange-400">.</span>dev
           </span>
         </button>
@@ -61,7 +61,7 @@ export default function Navbar() {
             <li key={s.id}>
               <button
                 onClick={() => scrollTo(s.id)}
-                className={`nav-link ${active === s.id ? 'active' : ''}`}
+                className={`nav-link text-lg ${active === s.id ? 'active' : ''}`}
               >
                 {s.label}
               </button>
@@ -95,7 +95,7 @@ export default function Navbar() {
               <li key={s.id}>
                 <button
                   onClick={() => scrollTo(s.id)}
-                  className={`nav-link text-base ${active === s.id ? 'active' : ''}`}
+                  className={`nav-link text-lg ${active === s.id ? 'active' : ''}`}
                 >
                   {s.label}
                 </button>

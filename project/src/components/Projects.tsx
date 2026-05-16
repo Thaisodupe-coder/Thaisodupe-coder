@@ -15,13 +15,13 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
         <div className="mb-16 text-center">
-          <p className="text-xs font-medium uppercase tracking-widest text-sky-500 mb-3 font-sans">
+          <p className="text-sm font-medium uppercase tracking-widest text-sky-500 mb-4 font-sans">
             Nhập môn công nghệ số & ứng dụng AI
           </p>
-          <h2 className="text-3xl font-bold text-white sm:text-4xl">
+          <h2 className="text-4xl font-bold text-white sm:text-5xl">
             Dự án & Bài tập
           </h2>
-          <p className="mt-4 mx-auto max-w-xl text-slate-400 text-sm leading-relaxed">
+          <p className="mt-6 mx-auto max-w-2xl text-slate-400 text-base sm:text-lg leading-relaxed">
             6 bài tập thực hành từ môn học, minh chứng năng lực ứng dụng công nghệ, quản lý công việc và sử dụng AI có trách nhiệm.
           </p>
         </div>
@@ -41,19 +41,19 @@ export default function Projects() {
               <div className="flex flex-1 flex-col p-5">
                 {/* Icon + badge */}
                 <div className="mb-4 flex items-start justify-between">
-                  <div className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${p.gradient} shadow-lg`}>
-                    <p.icon size={20} className="text-white" />
+                  <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${p.gradient} shadow-lg`}>
+                    <p.icon size={24} className="text-white" />
                   </div>
-                  <span className="font-mono text-xs text-slate-600">{p.badge}</span>
+                  <span className="font-mono text-sm text-slate-500">{p.badge}</span>
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-2 text-sm font-semibold leading-snug text-white group-hover:text-sky-300 transition-colors">
+                <h3 className="mb-3 text-lg font-semibold leading-snug text-white group-hover:text-sky-300 transition-colors">
                   {p.title}
                 </h3>
 
                 {/* Summary */}
-                <p className="flex-1 text-xs leading-relaxed text-slate-500 mb-4">
+                <p className="flex-1 text-sm leading-relaxed text-slate-400 mb-6">
                   {p.summary}
                 </p>
 
@@ -61,12 +61,12 @@ export default function Projects() {
                 <div className="flex items-center justify-between">
                   <div className="flex flex-wrap gap-1.5">
                     {p.tags?.slice(0, 2).map((t) => (
-                      <span key={t} className="tag text-[10px] px-2 py-0.5">{t}</span>
+                      <span key={t} className="tag text-xs px-2.5 py-1">{t}</span>
                     ))}
                   </div>
-                  <span className="flex items-center gap-1 text-xs text-slate-600 group-hover:text-sky-400 transition-colors">
+                  <span className="flex items-center gap-1.5 text-sm text-slate-500 group-hover:text-sky-400 transition-colors">
                     Chi tiết
-                    <ExternalLink size={12} />
+                    <ExternalLink size={16} />
                   </span>
                 </div>
               </div>
