@@ -25,8 +25,8 @@ export default function Summary() {
       <div className="mx-auto max-w-4xl">
         {/* Section header */}
         <div className="mb-16 text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-widest text-orange-400 mb-3">
-            // reflection
+          <p className="text-xs font-medium uppercase tracking-widest text-orange-400 mb-3 font-sans">
+            Phản ánh cá nhân
           </p>
           <h2 className="text-3xl font-bold text-white sm:text-4xl">Tổng kết</h2>
         </div>
@@ -80,12 +80,11 @@ export default function Summary() {
             <span className="text-red-400">Deadlock</span>.
           </p>
           <div className="rounded-lg border border-white/5 bg-[#0d1117] p-4">
-            <p className="font-mono text-xs text-emerald-400 mb-1">// bài học cốt lõi</p>
+            <p className="text-xs text-emerald-400 mb-1 font-sans font-medium">Bài học cốt lõi</p>
             <p className="text-sm text-slate-300 leading-relaxed">
               AI chỉ cung cấp{' '}
               <span className="text-orange-400 font-medium">nguyên liệu thô</span>. Tư duy phản biện,
-              kỹ năng debug độc lập và nguyên tắc{' '}
-              <span className="font-mono text-sky-400">Independent Verification</span> mới là yếu tố
+              kỹ năng debug độc lập và nguyên tắc kiểm chứng độc lập mới là yếu tố
               quyết định chất lượng và sự an toàn của hệ thống.
             </p>
           </div>

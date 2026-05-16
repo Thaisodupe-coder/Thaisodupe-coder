@@ -15,8 +15,8 @@ export default function Projects() {
       <div className="mx-auto max-w-6xl">
         {/* Section header */}
         <div className="mb-16 text-center">
-          <p className="font-mono text-xs font-medium uppercase tracking-widest text-sky-500 mb-3">
-            // nhập môn công nghệ số & ứng dụng AI
+          <p className="text-xs font-medium uppercase tracking-widest text-sky-500 mb-3 font-sans">
+            Nhập môn công nghệ số & ứng dụng AI
           </p>
           <h2 className="text-3xl font-bold text-white sm:text-4xl">
             Dự án & Bài tập

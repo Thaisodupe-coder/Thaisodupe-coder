@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { MapPin, BookOpen, ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
+import { MapPin, BookOpen, ChevronDown } from 'lucide-react';
 
 const typewriterPhrases = [
   'Software Architect',
@@ -106,29 +106,6 @@ export default function Hero() {
             Xem Dự án
             <ChevronDown size={16} className="transition-transform group-hover:translate-y-0.5" />
           </button>
-          <a
-            href="mailto:thai@example.com"
-            className="flex items-center gap-2 rounded-lg border border-white/10 px-6 py-2.5 text-sm font-semibold text-slate-300 transition-all duration-200 hover:border-sky-500/50 hover:text-sky-400"
-          >
-            <Mail size={16} />
-            Liên hệ
-          </a>
-        </div>
-
-        {/* Social */}
-        <div className="fade-in-up fade-in-up-delay-5 mt-8 flex items-center justify-center gap-4">
-          <a
-            href="#"
-            className="rounded-md border border-white/10 p-2 text-slate-500 transition-all hover:border-sky-500/40 hover:text-sky-400"
-          >
-            <Github size={16} />
-          </a>
-          <a
-            href="#"
-            className="rounded-md border border-white/10 p-2 text-slate-500 transition-all hover:border-sky-500/40 hover:text-sky-400"
-          >
-            <Linkedin size={16} />
-          </a>
         </div>
       </div>
 

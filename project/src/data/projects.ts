@@ -37,7 +37,7 @@ export const projects: Project[] = [
     objective: 'Trình bày cấu trúc thư mục tối ưu và quy tắc đặt tên tệp thống nhất, đảm bảo tính nhất quán và tránh lỗi môi trường đa nền tảng.',
     sections: [
       {
-        heading: 'cấu trúc thư mục',
+        heading: 'Cấu trúc thư mục',
         code: `ThucHanh_NguyenQuocThai/
 ├── TaiLieu/
 │   ├── GhiChuQuanTrong.txt
@@ -47,7 +47,7 @@ export const projects: Project[] = [
 └── KetQua/`,
       },
       {
-        heading: 'quy tắc áp dụng',
+        heading: 'Quy tắc áp dụng',
         items: [
           'Thiết lập cấu trúc thư mục <span class="font-mono text-sky-400">phân cấp rõ ràng</span> trên ổ đĩa cục bộ, bắt đầu bằng thư mục gốc <span class="font-mono text-orange-400">ThucHanh_NguyenQuocThai</span>.',
           'Áp dụng quy tắc đặt tên <span class="font-mono text-sky-400">PascalCase</span> — viết hoa chữ cái đầu mỗi từ, không dấu — tránh lỗi trên môi trường Linux/macOS.',
@@ -68,7 +68,7 @@ export const projects: Project[] = [
     objective: 'Áp dụng toán tử tìm kiếm nâng cao để tìm kiếm và đánh giá nguồn tin chuyên sâu về bài toán Fragile Base Class trong Java.',
     sections: [
       {
-        heading: 'chiến lược tìm kiếm (5 toán tử)',
+        heading: 'Chiến lược tìm kiếm (5 toán tử)',
         items: [
           '<span class="font-mono text-sky-400">intitle:"fragile base class" site:ieee.org OR site:springer.com</span> — Lọc bài báo khoa học trên IEEE/Springer có tiêu đề chứa từ khóa.',
           '<span class="font-mono text-sky-400">"Fragile Base Class" AND "Method Overriding" filetype:pdf</span> — Tìm tài liệu PDF chứa chính xác 2 cụm từ.',
@@ -78,7 +78,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: 'đánh giá nguồn & kết luận',
+        heading: 'Đánh giá nguồn & kết luận',
         items: [
           'Đánh giá <span class="font-mono text-orange-400">10 nguồn học thuật</span> (Mikhajlov, Businge, Snyder...) dựa trên 5 tiêu chí: Tác giả, Cơ quan xuất bản, Phương pháp, Trích dẫn, Tính cập nhật.',
           'Kết quả: Lạm dụng ghi đè <span class="text-red-400">phá vỡ tính đóng gói</span> và gây ra Fragile Base Class Problem.',
@@ -106,7 +106,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: 'kỹ thuật áp dụng',
+        heading: 'Kỹ thuật áp dụng',
         items: [
           '<span class="font-mono text-sky-400">Role-playing</span>: Gán vai trò cụ thể (Senior Dev, Giáo sư Toán) để định hướng ngữ cảnh.',
           '<span class="font-mono text-sky-400">Chain-of-thought</span>: Yêu cầu AI trình bày lập luận từng bước trước khi đưa ra kết luận.',
@@ -126,7 +126,7 @@ export const projects: Project[] = [
     objective: 'Minh chứng việc phối hợp trực tuyến hiệu quả trong dự án "Phần mềm Quản lý Thư viện Java", từ quản lý tiến độ đến giao tiếp và lưu trữ.',
     sections: [
       {
-        heading: 'trello — quản lý tiến độ',
+        heading: 'Trello — quản lý tiến độ',
         items: [
           'Xây dựng bảng Kanban <span class="font-mono text-sky-400">4 cột</span>: Backlog → Doing → Review → Done.',
           'Áp dụng <span class="text-orange-400">nhãn màu</span> phân loại task: JavaFX, Database, Báo cáo.',
@@ -134,14 +134,14 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: 'discord — giao tiếp & debug',
+        heading: 'Discord — giao tiếp & debug',
         items: [
           'Phân chia kênh rõ ràng: <span class="font-mono text-orange-400">#thong-bao-chung</span>, <span class="font-mono text-orange-400">#thao-luan-code</span>.',
           'Sử dụng tính năng <span class="text-sky-400">Thread</span> để giải quyết tình trạng trôi thông báo khi debug session kéo dài.',
         ],
       },
       {
-        heading: 'google workspace — tài liệu',
+        heading: 'Google Workspace — tài liệu',
         items: [
           'Cấu trúc Drive với <span class="text-sky-400">phân quyền nghiêm ngặt</span> — tránh ghi đè tệp nhau.',
           'Áp dụng chế độ <span class="font-mono text-orange-400">Suggesting</span> (Đề xuất) trên Google Docs, giải quyết triệt để việc ghi đè nội dung.',
@@ -160,7 +160,7 @@ export const projects: Project[] = [
     objective: 'Trưng bày Infographic "Best Practices tối ưu Java 25" được sản xuất thông qua quy trình tích hợp đa công cụ AI tạo sinh.',
     sections: [
       {
-        heading: 'quy trình tích hợp AI',
+        heading: 'Quy trình tích hợp AI',
         items: [
           '<span class="text-sky-400 font-medium">Google Gemini:</span> Phân tích kỹ thuật, lập dàn ý về <span class="font-mono text-orange-400">ZGC (Z Garbage Collector)</span>, xử lý Thread Pool và sinh code so sánh hiệu năng String/StringBuilder.',
           '<span class="text-sky-400 font-medium">DALL-E 3:</span> Trực quan hóa khái niệm trừu tượng (vùng nhớ Eden, Survivor) bằng prompt chi tiết với dark theme & neon colors.',
@@ -168,7 +168,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        heading: 'chủ đề nội dung',
+        heading: 'Chủ đề nội dung',
         items: [
           'ZGC — Z Garbage Collector: cơ chế và lợi thế với GC pause < 1ms.',
           'Thread Pool optimization: cấu hình <span class="font-mono text-sky-400">ExecutorService</span> tối ưu.',
@@ -188,7 +188,7 @@ export const projects: Project[] = [
     objective: 'Trình bày bộ nguyên tắc cá nhân về sử dụng AI trong môi trường học thuật, đảm bảo tính toàn vẹn học thuật và chất lượng kỹ thuật.',
     sections: [
       {
-        heading: 'bộ nguyên tắc cá nhân',
+        heading: 'Bộ nguyên tắc cá nhân',
         items: [
           '<span class="font-mono text-orange-400">Think First, Prompt Later:</span> Tự vẽ UML và định hình kiến trúc trước khi dùng AI — AI là trợ lý, không phải người thiết kế.',
           '<span class="font-mono text-orange-400">Quy tắc giải thích 100%:</span> Không giữ lại bất kỳ dòng code nào (ví dụ: <span class="font-mono text-sky-400">ReentrantLock</span>) nếu không tự giải thích được cơ chế hoạt động.',

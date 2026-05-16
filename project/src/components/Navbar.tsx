@@ -50,7 +50,7 @@ export default function Navbar() {
         >
           <Terminal size={18} />
           <span className="font-mono text-sm font-medium tracking-wider text-sky-400">
-            NQT<span className="text-orange-400">_</span>dev
+            NQT<span className="text-orange-400">.</span>dev
           </span>
         </button>
 

@@ -48,8 +48,8 @@ export default function ProjectModal({ project, onClose }: Props) {
         <div className="px-6 py-6 space-y-6">
           {/* Objective */}
           <div>
-            <h3 className="mb-2 font-mono text-xs font-medium uppercase tracking-widest text-sky-500">
-              // mục tiêu
+            <h3 className="mb-2 text-xs font-medium uppercase tracking-widest text-sky-500 font-sans">
+              Mục tiêu
             </h3>
             <p className="text-sm leading-relaxed text-slate-300">{project.objective}</p>
           </div>
@@ -57,8 +57,8 @@ export default function ProjectModal({ project, onClose }: Props) {
           {/* Content sections */}
           {project.sections.map((sec, i) => (
             <div key={i}>
-              <h3 className="mb-3 font-mono text-xs font-medium uppercase tracking-widest text-orange-400">
-                // {sec.heading}
+              <h3 className="mb-3 text-xs font-medium uppercase tracking-widest text-orange-400 font-sans">
+                {sec.heading}
               </h3>
               {sec.items ? (
                 <ul className="space-y-2">
