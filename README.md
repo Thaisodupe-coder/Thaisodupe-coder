@@ -19,14 +19,6 @@ Chào mừng bạn đến với trang Web Portfolio cá nhân của **Nguyễn Q
 
 ---
 
-## 🛠️ Công nghệ sử dụng
-- **Frontend Framework:** React.js
-- **Styling:** Tailwind CSS
-- **Icons:** Lucide React
-- **Build Tool:** Vite (Node.js 18+)
-- **CI/CD & Hosting:** GitHub Actions & GitHub Pages
-
----
 
 ## 📚 Danh sách Bài tập / Dự án
 
@@ -44,6 +36,15 @@ Portfolio bao gồm 6 bài tập cốt lõi minh chứng cho năng lực số v�
    - Tích hợp Gemini, DALL-E 3 và Canva AI để sản xuất nội dung Infographic học thuật.
 6. **Bài tập 06: Sử dụng AI Có Trách nhiệm**
    - Xây dựng bộ nguyên tắc cá nhân trong học thuật, kiểm chứng kết quả và bảo vệ toàn vẹn dữ liệu.
+
+---
+
+## 🛠️ Công nghệ sử dụng
+- **Frontend Framework:** React.js
+- **Styling:** Tailwind CSS
+- **Icons:** Lucide React
+- **Build Tool:** Vite (Node.js 18+)
+- **CI/CD & Hosting:** GitHub Actions & GitHub Pages
 
 ---
 
