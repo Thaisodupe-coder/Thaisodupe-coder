@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, Github, GraduationCap } from 'lucide-react';
+import { Mail, Phone, Github, GraduationCap } from 'lucide-react';
 
 export default function Hero() {
   const scrollTo = (id: string) => {
@@ -51,10 +51,7 @@ export default function Hero() {
                   <span>0978474084</span>
                 </li>
                 <li className="flex items-center gap-4 pt-2">
-                  <a href="#" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
-                    <Linkedin size={20} />
-                  </a>
-                  <a href="#" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
+                  <a href="https://github.com/Thaisodupe-coder/Thaisodupe-coder.github.io" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
                     <Github size={20} />
                   </a>
                 </li>
