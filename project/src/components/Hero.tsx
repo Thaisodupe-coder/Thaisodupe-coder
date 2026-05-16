@@ -18,7 +18,7 @@ export default function Hero() {
             {/* Icon/Logo UET */}
             <div className="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-white p-1.5 border border-violet-500/30 shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-transform hover:scale-105">
               <img 
-                src="https://upload.wikimedia.org/wikipedia/commons/1/1d/Logo_of_VNU_University_of_Engineering_and_Technology.svg" 
+                src="https://upload.wikimedia.org/wikipedia/vi/b/bf/Logo_HUET.svg" 
                 alt="UET Logo" 
                 className="h-full w-full object-contain"
               />
