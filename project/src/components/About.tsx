@@ -12,9 +12,9 @@ export default function About() {
         <img
           src="https://vietjack.me/storage/uploads/images/526/dai-hoc-cong-nghe-3-1659687487.jpg"
           alt="UET Background"
-          className="h-full w-full object-cover object-center grayscale opacity-20 mix-blend-luminosity"
+          className="h-full w-full object-cover object-center opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117] via-[#0d1117]/80 to-[#0d1117]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0d1117] via-[#0d1117]/70 to-[#0d1117]" />
       </div>
 
       {/* Divider phía trên */}
@@ -52,8 +52,6 @@ export default function About() {
             </div>
             <h3 className="mt-6 mb-3 text-lg font-semibold text-slate-200">Chuyên ngành</h3>
             <p className="text-sm leading-relaxed text-slate-400">
-              Công nghệ thông tin<br />
-              UET - VNU
               Ngành Công nghệ thông tin<br />
               Khóa K70 | UET - VNU
             </p>
@@ -91,7 +89,6 @@ export default function About() {
               Định hướng phát triển
             </h3>
             <p className="pl-8 text-slate-400 leading-relaxed">
-              Khát vọng xây dựng những "xương sống" công nghệ bền vững trong vai trò Software Architect kết hợp DevOps tương lai.
               Phát triển chuyên môn sâu để trở thành Software Architect kết hợp DevOps. Trọng tâm song song là rèn luyện kỹ năng làm việc nhóm (teamwork) và nâng cao năng lực giao tiếp, đàm phán với khách hàng.
             </p>
           </div>
