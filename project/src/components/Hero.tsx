@@ -25,7 +25,7 @@ export default function Hero() {
             </div>
 
             {/* Tiêu đề chính */}
-            <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl leading-tight">
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl leading-tight">
               Xin chào, tôi là <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-sky-400">
                 Nguyễn Quốc Thái
@@ -33,47 +33,47 @@ export default function Hero() {
             </h1>
 
             {/* Tiêu đề phụ */}
-            <p className="mb-8 text-lg italic text-slate-400 max-w-lg leading-relaxed">
+            <p className="mb-10 text-xl sm:text-2xl italic text-slate-400 max-w-2xl leading-relaxed">
               "Một 'tân binh' đầy tham vọng tại K70 ngành Công nghệ Thông tin, UET."
             </p>
 
             {/* Divider */}
-            <div className="mb-8 h-px w-full max-w-md bg-gradient-to-r from-white/20 to-transparent" />
+            <div className="mb-10 h-px w-full max-w-lg bg-gradient-to-r from-white/20 to-transparent" />
 
             {/* Thông tin liên hệ */}
-            <div className="mb-10">
-              <h3 className="mb-4 inline-block text-sm font-semibold uppercase tracking-wider text-slate-300 underline decoration-violet-500/50 decoration-2 underline-offset-8">
+            <div className="mb-12">
+              <h3 className="mb-5 inline-block text-base font-semibold uppercase tracking-wider text-slate-300 underline decoration-violet-500/50 decoration-2 underline-offset-8">
                 Thông tin liên hệ
               </h3>
-              <ul className="space-y-3 mt-4">
-                <li className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white">
-                  <Mail size={18} className="text-violet-400" />
+              <ul className="space-y-4 mt-5 text-lg">
+                <li className="flex items-center gap-4 text-slate-400 transition-colors hover:text-white">
+                  <Mail size={22} className="text-violet-400" />
                   <span>25020389@vnu.edu.vn</span>
                 </li>
-                <li className="flex items-center gap-3 text-slate-400 transition-colors hover:text-white">
-                  <Phone size={18} className="text-violet-400" />
+                <li className="flex items-center gap-4 text-slate-400 transition-colors hover:text-white">
+                  <Phone size={22} className="text-violet-400" />
                   <span>0978474084</span>
                 </li>
-                <li className="flex items-center gap-4 pt-2">
+                <li className="flex items-center gap-5 pt-3">
                   <a href="https://www.facebook.com/thaisodupee/" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
-                    <Facebook size={20} />
+                    <Facebook size={24} />
                   </a>
                   <a href="https://github.com/Thaisodupe-coder/Thaisodupe-coder.github.io" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
-                    <Github size={20} />
+                    <Github size={24} />
                   </a>
                 </li>
               </ul>
             </div>
 
             {/* 3 Nút bấm */}
-            <div className="flex flex-wrap gap-4">
-              <button onClick={() => scrollTo('about')} className="rounded-lg bg-violet-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+            <div className="flex flex-wrap gap-5">
+              <button onClick={() => scrollTo('about')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
                 Bản thân
               </button>
-              <button onClick={() => scrollTo('projects')} className="rounded-lg bg-violet-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('projects')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
                 Dự án
               </button>
-              <button onClick={() => scrollTo('summary')} className="rounded-lg bg-violet-600 px-6 py-2.5 text-sm font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('summary')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
                 Tổng kết
               </button>
             </div>
