@@ -83,7 +83,7 @@ export default function Hero() {
         {/* Cột phải: Hình ảnh chân dung */}
         <div className="relative h-96 w-full lg:h-screen lg:min-h-screen">
           <img
-            src="https://scontent.fhan5-2.fna.fbcdn.net/v/t39.30808-6/536269729_1190169519812400_7762755709101694260_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeERV8NsrLlKbZqUuli49QonD1JSNI5CbNEPUlI0jkJs0b96DMIOQ9XLkn0pzab68U2ee-bjHTQPEnMP8YYwhQzK&_nc_ohc=DvllWroDD6AQ7kNvwHujeYh&_nc_oc=AdpjORAcUsMVq3EyYLb_WN3uZg6pC0uNB84RjzcJ9JGHpSfHfc-CO-Q3RIrnZXC4I00&_nc_zt=23&_nc_ht=scontent.fhan5-2.fna&_nc_gid=xcYV_BdiH8EyULWts5A2Og&_nc_ss=7b2a8&oh=00_Af6xRr0wXpRq__Z5MNbHc3nKqdEVF07Kzo7krh0N_-KIeg&oe=6A0E62B6"
+            src="/reports/main-pg.png"
             alt="Công nghệ thông tin"
             className="h-full w-full object-cover object-center"
           />
