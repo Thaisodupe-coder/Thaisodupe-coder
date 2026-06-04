@@ -125,9 +125,9 @@ export default function ProjectModal({ project, onClose }: Props) {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-shine-effect relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-[10px] border border-[rgba(22,76,167,0.6)] bg-white px-[35px] py-[17px] text-[#1d89ff] no-underline outline-none transition-all duration-300 ease-[cubic-bezier(0.02,0.01,0.47,1)] after:absolute after:-left-[75px] after:-top-[50px] after:-z-10 after:h-[155px] after:w-[50px] after:rotate-[35deg] after:bg-[#38ef7d] after:opacity-40 after:transition-all after:duration-[550ms] after:ease-[cubic-bezier(0.19,1,0.22,1)] hover:after:left-[120%]"
+                className={`btn-shine-effect relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-[10px] border bg-white px-[35px] py-[17px] no-underline outline-none transition-all duration-300 ease-[cubic-bezier(0.02,0.01,0.47,1)] after:absolute after:-left-[75px] after:-top-[50px] after:-z-10 after:h-[155px] after:w-[50px] after:rotate-[35deg] after:opacity-40 after:transition-all after:duration-[550ms] after:ease-[cubic-bezier(0.19,1,0.22,1)] hover:after:left-[120%] ${project.btnBorder} ${project.btnText} ${project.btnShine}`}
               >
-                <span className="relative z-20 flex items-center gap-2 text-[14px] font-medium uppercase tracking-[0.7px] text-[#164ca7]">
+                <span className={`relative z-20 flex items-center gap-2 text-[14px] font-medium uppercase tracking-[0.7px] ${project.btnTextHover}`}>
                   <FileText size={20} />
                   Xem Báo Cáo Chi Tiết
                 </span>

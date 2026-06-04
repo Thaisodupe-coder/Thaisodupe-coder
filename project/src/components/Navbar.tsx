@@ -38,18 +38,18 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 z-50 w-full transition-all duration-300 ${
+      className={`fixed top-4 left-1/2 z-50 w-[95%] max-w-5xl -translate-x-1/2 rounded-full transition-all duration-300 ${
         scrolled
-          ? 'border-b border-slate-200 bg-white/90 backdrop-blur-md shadow-sm'
-          : 'bg-transparent'
+          ? 'border border-slate-200 bg-white/95 backdrop-blur-md shadow-lg'
+          : 'border border-slate-200/50 bg-white/60 backdrop-blur-md shadow-sm'
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+      <nav className="mx-auto flex w-full items-center justify-between px-6 py-3">
         <button
           onClick={() => scrollTo('hero')}
-          className="group flex items-center gap-3 transition-all"
+          className="group flex items-center gap-3 transition-all duration-300 hover:-translate-y-1"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-sky-500 to-blue-600 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
             <Code size={20} className="text-white" />
           </div>
           <span className="font-sans text-lg font-bold tracking-wide text-slate-800 transition-colors duration-300 group-hover:text-sky-600">
@@ -63,7 +63,7 @@ export default function Navbar() {
             <li key={s.id}>
               <button
                 onClick={() => scrollTo(s.id)}
-                className={`group relative text-lg font-medium transition-colors ${
+                className={`group relative text-lg font-medium transition-all duration-300 hover:-translate-y-1 ${
                   active === s.id ? `${s.activeText} font-semibold` : `text-slate-600 ${s.hoverText}`
                 }`}
               >
@@ -76,7 +76,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="flex flex-col gap-1.5 md:hidden"
+          className="flex flex-col gap-1.5 p-2 md:hidden"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
@@ -94,13 +94,13 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {menuOpen && (
-        <div className="border-t border-slate-200 bg-white/95 backdrop-blur-md md:hidden shadow-lg">
-          <ul className="flex flex-col px-6 py-4 gap-4">
+        <div className="absolute left-0 top-[calc(100%+1rem)] w-full rounded-2xl border border-slate-200 bg-white/95 p-4 shadow-xl backdrop-blur-md md:hidden">
+          <ul className="flex flex-col gap-4">
             {sections.map((s) => (
               <li key={s.id}>
                 <button
                   onClick={() => scrollTo(s.id)}
-                  className={`group relative inline-block text-left text-lg font-medium transition-colors ${
+                  className={`group relative inline-block text-left text-lg font-medium transition-all duration-300 hover:-translate-y-1 ${
                     active === s.id ? `${s.activeText} font-semibold` : `text-slate-600 ${s.hoverText}`
                   }`}
                 >
