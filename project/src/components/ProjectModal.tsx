@@ -73,7 +73,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                   ))}
                 </ul>
               ) : sec.code ? (
-                <pre className="overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 p-4 font-mono text-xs leading-relaxed text-sky-700">
+                <pre className="overflow-x-auto rounded-lg border-l-4 border-slate-300 bg-slate-100 p-4 font-mono text-xs leading-relaxed text-slate-800 shadow-inner">
                   {sec.code}
                 </pre>
               ) : null}

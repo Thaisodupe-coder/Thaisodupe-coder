@@ -12,7 +12,7 @@ export default function Hero() {
         {/* Cột trái: Thông tin */}
         <div className="relative z-10 flex flex-col justify-center px-8 py-24 lg:px-16 xl:px-24">
           {/* Glow effect */}
-          <div className="pointer-events-none absolute top-1/4 left-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-600/10 blur-[100px]" />
+          <div className="pointer-events-none absolute top-1/4 left-1/4 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-violet-500/15 blur-[100px]" />
 
           <div className="fade-in-up">
             {/* Icon/Logo UET */}

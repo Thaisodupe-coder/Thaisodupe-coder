@@ -6,14 +6,14 @@ const skills = [
     title: 'Prompt Engineering',
     desc: 'Học cách giao tiếp và đặt ranh giới kỹ thuật với AI, biến nó từ công cụ sinh chữ thành "người phản biện" kiến trúc phần mềm hiệu quả.',
     color: 'text-sky-600',
-    bg: 'bg-sky-50 border-sky-200',
+    bg: 'bg-white border-slate-200 shadow-sm',
   },
   {
     icon: Users,
     title: 'Collaboration & Async',
     desc: 'Thay đổi hoàn toàn tư duy làm việc nhóm — thiết lập quy trình giao tiếp bất đồng bộ trơn tru qua Discord, Trello và Google Docs.',
     color: 'text-orange-600',
-    bg: 'bg-orange-50 border-orange-200',
+    bg: 'bg-white border-slate-200 shadow-sm',
   },
 ];
 
@@ -66,7 +66,7 @@ export default function Summary() {
         </div>
 
         {/* Biggest challenge */}
-        <div className="rounded-2xl border border-amber-200 bg-amber-50 p-8 sm:p-10">
+        <div className="rounded-2xl border border-amber-200 bg-white shadow-sm p-8 sm:p-10">
           <div className="flex items-center gap-4 mb-6">
             <AlertTriangle size={28} className="text-amber-600 flex-shrink-0" />
             <h3 className="text-xl font-semibold text-slate-900">Thách thức Lớn nhất & Bài học Cốt lõi</h3>
@@ -79,7 +79,7 @@ export default function Summary() {
             <span className="font-mono text-sky-600">Lock</span>, dễ gây{' '}
             <span className="text-red-600">Deadlock</span>.
           </p>
-          <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm">
+          <div className="rounded-xl border border-emerald-200 bg-emerald-50/50 p-6">
             <p className="text-sm text-emerald-600 mb-2 font-sans font-medium">Bài học cốt lõi</p>
             <p className="text-base sm:text-lg text-slate-700 leading-relaxed">
               AI chỉ cung cấp{' '}

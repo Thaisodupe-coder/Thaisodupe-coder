@@ -8,7 +8,7 @@ export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="relative px-6 py-24 bg-slate-50">
+    <section id="projects" className="relative px-6 py-24 bg-white">
       {/* Subtle top divider glow */}
       <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 bg-gradient-to-r from-transparent via-sky-300 to-transparent" />
 
@@ -32,7 +32,7 @@ export default function Projects() {
             <button
               key={p.id}
               onClick={() => setSelected(p)}
-              className="card-glow group relative flex flex-col overflow-hidden rounded-xl bg-white border border-slate-200 shadow-sm text-left hover:shadow-md transition-shadow"
+              className="card-glow group relative flex flex-col overflow-hidden rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-sm text-left hover:shadow-md transition-all"
               style={{ animationDelay: `${i * 0.07}s` }}
             >
               {/* Top accent bar */}
@@ -61,7 +61,7 @@ export default function Projects() {
                 <div className="flex items-center justify-between">
                   <div className="flex flex-wrap gap-1.5">
                     {p.tags?.slice(0, 2).map((t) => (
-                      <span key={t} className="tag text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md border border-slate-200">{t}</span>
+                      <span key={t} className="tag text-xs px-2.5 py-1 bg-white text-slate-600 rounded-md border border-slate-200">{t}</span>
                     ))}
                   </div>
                   <span className="flex items-center gap-1.5 text-sm text-slate-500 group-hover:text-sky-600 transition-colors">

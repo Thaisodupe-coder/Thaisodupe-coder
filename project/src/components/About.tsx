@@ -6,7 +6,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="relative px-6 py-24 overflow-hidden bg-slate-50">
+    <section id="about" className="relative px-6 py-24 overflow-hidden bg-white">
       {/* Background Image */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <img
@@ -14,7 +14,7 @@ export default function About() {
           alt="UET Background"
           className="h-full w-full object-cover object-center opacity-25"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-slate-50 via-slate-50/80 to-slate-50" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-white" />
       </div>
 
       {/* Divider phía trên */}
@@ -34,8 +34,8 @@ export default function About() {
         {/* Khối Thẻ thông tin (Grid 3 columns) */}
         <div className="mb-16 grid gap-6 sm:grid-cols-3">
           {/* Thẻ 1 */}
-          <div className="relative flex flex-col items-center rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-transform hover:-translate-y-1">
-            <div className="absolute -top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 text-sky-600 shadow-[0_0_15px_rgba(14,165,233,0.2)]">
+          <div className="relative flex flex-col items-center rounded-2xl border border-sky-100 bg-sky-50/60 backdrop-blur-sm p-6 shadow-lg transition-transform hover:-translate-y-1">
+            <div className="absolute -top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-sky-200 text-sky-600 shadow-[0_0_15px_rgba(14,165,233,0.2)]">
               <User size={20} />
             </div>
             <h3 className="mt-6 mb-3 text-xl font-semibold text-slate-800">Thông tin cá nhân</h3>
@@ -46,8 +46,8 @@ export default function About() {
           </div>
 
           {/* Thẻ 2 */}
-          <div className="relative flex flex-col items-center rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-transform hover:-translate-y-1">
-            <div className="absolute -top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 text-sky-600 shadow-[0_0_15px_rgba(14,165,233,0.2)]">
+          <div className="relative flex flex-col items-center rounded-2xl border border-indigo-100 bg-indigo-50/60 backdrop-blur-sm p-6 shadow-lg transition-transform hover:-translate-y-1">
+            <div className="absolute -top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-indigo-200 text-indigo-600 shadow-[0_0_15px_rgba(99,102,241,0.2)]">
               <Book size={20} />
             </div>
             <h3 className="mt-6 mb-3 text-xl font-semibold text-slate-800">Chuyên ngành</h3>
@@ -58,8 +58,8 @@ export default function About() {
           </div>
 
           {/* Thẻ 3 */}
-          <div className="relative flex flex-col items-center rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm p-6 shadow-lg transition-transform hover:-translate-y-1">
-            <div className="absolute -top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-slate-200 text-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.2)]">
+          <div className="relative flex flex-col items-center rounded-2xl border border-orange-100 bg-orange-50/60 backdrop-blur-sm p-6 shadow-lg transition-transform hover:-translate-y-1">
+            <div className="absolute -top-6 flex h-12 w-12 items-center justify-center rounded-full bg-white border border-orange-200 text-orange-600 shadow-[0_0_15px_rgba(249,115,22,0.2)]">
               <Heart size={20} />
             </div>
             <h3 className="mt-6 mb-3 text-xl font-semibold text-slate-800">Sở thích</h3>
@@ -72,7 +72,7 @@ export default function About() {
         </div>
 
         {/* Mục tiêu Portfolio & Định hướng */}
-        <div className="mx-auto max-w-3xl space-y-10 rounded-2xl border border-slate-200 bg-white/80 backdrop-blur-sm p-10 text-left shadow-lg">
+        <div className="mx-auto max-w-3xl space-y-10 rounded-2xl border border-slate-200 bg-slate-50/80 backdrop-blur-sm p-10 text-left shadow-lg">
           <div>
             <h3 className="mb-4 flex items-center gap-3 text-2xl font-semibold text-slate-900">
               <Target className="text-sky-600" size={28} />
