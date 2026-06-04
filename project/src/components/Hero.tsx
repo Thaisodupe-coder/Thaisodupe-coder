@@ -67,13 +67,13 @@ export default function Hero() {
 
             {/* 3 Nút bấm */}
             <div className="flex flex-wrap gap-5">
-              <button onClick={() => scrollTo('about')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-700 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('about')} className="rounded-lg border-2 border-violet-600 bg-transparent px-8 py-3.5 text-base font-semibold tracking-wide text-violet-600 shadow-[inset_0_0_0_0_#7c3aed] transition-all duration-500 ease-out hover:text-white hover:shadow-[inset_0_-100px_0_0_#7c3aed] active:scale-90">
                 Bản thân
               </button>
-              <button onClick={() => scrollTo('projects')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-700 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('projects')} className="rounded-lg border-2 border-violet-600 bg-transparent px-8 py-3.5 text-base font-semibold tracking-wide text-violet-600 shadow-[inset_0_0_0_0_#7c3aed] transition-all duration-500 ease-out hover:text-white hover:shadow-[inset_0_-100px_0_0_#7c3aed] active:scale-90">
                 Dự án
               </button>
-              <button onClick={() => scrollTo('summary')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-700 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('summary')} className="rounded-lg border-2 border-violet-600 bg-transparent px-8 py-3.5 text-base font-semibold tracking-wide text-violet-600 shadow-[inset_0_0_0_0_#7c3aed] transition-all duration-500 ease-out hover:text-white hover:shadow-[inset_0_-100px_0_0_#7c3aed] active:scale-90">
                 Tổng kết
               </button>
             </div>
