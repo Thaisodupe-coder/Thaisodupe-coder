@@ -6,7 +6,7 @@ export default function Hero() {
   };
 
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden bg-[#0d1117]">
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-slate-50">
       <div className="grid lg:grid-cols-2 min-h-screen">
         
         {/* Cột trái: Thông tin */}
@@ -25,40 +25,40 @@ export default function Hero() {
             </div>
 
             {/* Tiêu đề chính */}
-            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-white sm:text-6xl lg:text-7xl leading-tight">
+            <h1 className="mb-6 text-5xl font-extrabold tracking-tight text-slate-900 sm:text-6xl lg:text-7xl leading-tight">
               Xin chào, tôi là <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-400 to-sky-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-sky-500">
                 Nguyễn Quốc Thái
               </span>
             </h1>
 
             {/* Tiêu đề phụ */}
-            <p className="mb-10 text-xl sm:text-2xl italic text-slate-400 max-w-2xl leading-relaxed">
+            <p className="mb-10 text-xl sm:text-2xl italic text-slate-600 max-w-2xl leading-relaxed">
               "Một 'tân binh' đầy tham vọng tại K70 ngành Công nghệ Thông tin, UET."
             </p>
 
             {/* Divider */}
-            <div className="mb-10 h-px w-full max-w-lg bg-gradient-to-r from-white/20 to-transparent" />
+            <div className="mb-10 h-px w-full max-w-lg bg-gradient-to-r from-slate-300 to-transparent" />
 
             {/* Thông tin liên hệ */}
             <div className="mb-12">
-              <h3 className="mb-5 inline-block text-base font-semibold uppercase tracking-wider text-slate-300 underline decoration-violet-500/50 decoration-2 underline-offset-8">
+              <h3 className="mb-5 inline-block text-base font-semibold uppercase tracking-wider text-slate-700 underline decoration-violet-500/50 decoration-2 underline-offset-8">
                 Thông tin liên hệ
               </h3>
               <ul className="space-y-4 mt-5 text-lg">
-                <li className="flex items-center gap-4 text-slate-400 transition-colors hover:text-white">
-                  <Mail size={22} className="text-violet-400" />
+                <li className="flex items-center gap-4 text-slate-600 transition-colors hover:text-slate-900">
+                  <Mail size={22} className="text-violet-600" />
                   <span>25020389@vnu.edu.vn</span>
                 </li>
-                <li className="flex items-center gap-4 text-slate-400 transition-colors hover:text-white">
-                  <Phone size={22} className="text-violet-400" />
+                <li className="flex items-center gap-4 text-slate-600 transition-colors hover:text-slate-900">
+                  <Phone size={22} className="text-violet-600" />
                   <span>0978474084</span>
                 </li>
                 <li className="flex items-center gap-5 pt-3">
-                  <a href="https://www.facebook.com/thaisodupee/" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
+                  <a href="https://www.facebook.com/thaisodupee/" target="_blank" rel="noopener noreferrer" className="rounded-full bg-slate-200/50 p-2 text-slate-600 transition-all hover:bg-violet-600 hover:text-white">
                     <Facebook size={24} />
                   </a>
-                  <a href="https://github.com/Thaisodupe-coder/Thaisodupe-coder.github.io" target="_blank" rel="noopener noreferrer" className="rounded-full bg-white/5 p-2 text-slate-400 transition-all hover:bg-violet-500 hover:text-white">
+                  <a href="https://github.com/Thaisodupe-coder/Thaisodupe-coder.github.io" target="_blank" rel="noopener noreferrer" className="rounded-full bg-slate-200/50 p-2 text-slate-600 transition-all hover:bg-violet-600 hover:text-white">
                     <Github size={24} />
                   </a>
                 </li>
@@ -67,13 +67,13 @@ export default function Hero() {
 
             {/* 3 Nút bấm */}
             <div className="flex flex-wrap gap-5">
-              <button onClick={() => scrollTo('about')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('about')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-700 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
                 Bản thân
               </button>
-              <button onClick={() => scrollTo('projects')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('projects')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-700 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
                 Dự án
               </button>
-              <button onClick={() => scrollTo('summary')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
+              <button onClick={() => scrollTo('summary')} className="rounded-lg bg-violet-600 px-8 py-3.5 text-base font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-700 hover:shadow-[0_0_25px_rgba(124,58,237,0.5)]">
                 Tổng kết
               </button>
             </div>
@@ -88,7 +88,7 @@ export default function Hero() {
             className="h-full w-full object-cover object-center"
           />
           {/* Lớp phủ gradient để hòa trộn ảnh vào background tối */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/40 to-transparent lg:bg-gradient-to-r lg:from-[#0d1117] lg:via-[#0d1117]/50 lg:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-50/40 to-transparent lg:bg-gradient-to-r lg:from-slate-50 lg:via-slate-50/50 lg:to-transparent" />
         </div>
 
       </div>

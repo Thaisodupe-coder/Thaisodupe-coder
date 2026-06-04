@@ -21,24 +21,24 @@ export default function ProjectModal({ project, onClose }: Props) {
   return (
     <div
       className="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)' }}
+      style={{ background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(6px)' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="modal-panel relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-white/10 bg-[#161b22] shadow-2xl">
+      <div className="modal-panel relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl">
         {/* Header */}
-        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 rounded-t-2xl border-b border-white/5 bg-[#161b22] px-6 py-5">
+        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 rounded-t-2xl border-b border-slate-200 bg-white px-6 py-5">
           <div className="flex items-center gap-3 min-w-0">
             <div className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${project.gradient}`}>
               <project.icon size={20} className="text-white" />
             </div>
             <div className="min-w-0">
               <p className="font-mono text-xs text-slate-500">{project.badge}</p>
-              <h2 className="text-base font-semibold text-white leading-snug">{project.title}</h2>
+              <h2 className="text-base font-semibold text-slate-900 leading-snug">{project.title}</h2>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="flex-shrink-0 rounded-md border border-white/10 p-1.5 text-slate-500 transition-all hover:border-red-500/50 hover:text-red-400"
+            className="flex-shrink-0 rounded-md border border-slate-200 p-1.5 text-slate-500 transition-all hover:bg-slate-100 hover:border-red-500/50 hover:text-red-500"
           >
             <X size={16} />
           </button>
@@ -48,22 +48,22 @@ export default function ProjectModal({ project, onClose }: Props) {
         <div className="px-6 py-6 space-y-6">
           {/* Objective */}
           <div>
-            <h3 className="mb-2 text-xs font-medium uppercase tracking-widest text-sky-500 font-sans">
+            <h3 className="mb-2 text-xs font-medium uppercase tracking-widest text-sky-600 font-sans">
               Mục tiêu
             </h3>
-            <p className="text-sm leading-relaxed text-slate-300">{project.objective}</p>
+            <p className="text-sm leading-relaxed text-slate-700">{project.objective}</p>
           </div>
 
           {/* Content sections */}
           {project.sections.map((sec, i) => (
             <div key={i}>
-              <h3 className="mb-3 text-xs font-medium uppercase tracking-widest text-orange-400 font-sans">
+              <h3 className="mb-3 text-xs font-medium uppercase tracking-widest text-orange-600 font-sans">
                 {sec.heading}
               </h3>
               {sec.items ? (
                 <ul className="space-y-2">
                   {sec.items.map((item, j) => (
-                    <li key={j} className="flex gap-3 text-sm text-slate-300">
+                    <li key={j} className="flex gap-3 text-sm text-slate-700">
                       <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-500" />
                       <span
                         dangerouslySetInnerHTML={{ __html: item }}
@@ -73,7 +73,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                   ))}
                 </ul>
               ) : sec.code ? (
-                <pre className="overflow-x-auto rounded-lg border border-white/5 bg-[#0d1117] p-4 font-mono text-xs leading-relaxed text-sky-300">
+                <pre className="overflow-x-auto rounded-lg border border-slate-200 bg-slate-50 p-4 font-mono text-xs leading-relaxed text-sky-700">
                   {sec.code}
                 </pre>
               ) : null}
@@ -84,14 +84,14 @@ export default function ProjectModal({ project, onClose }: Props) {
           {project.tags && (
             <div className="flex flex-wrap gap-2 pt-2">
               {project.tags.map((t) => (
-                <span key={t} className="tag">{t}</span>
+                <span key={t} className="tag text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md border border-slate-200">{t}</span>
               ))}
             </div>
           )}
 
           {/* Report Button */}
           {project.reportFile && (
-            <div className="mt-8 flex justify-center border-t border-white/10 pt-6">
+            <div className="mt-8 flex justify-center border-t border-slate-200 pt-6">
               <a
                 href={
                   project.reportFile.endsWith('.docx')
