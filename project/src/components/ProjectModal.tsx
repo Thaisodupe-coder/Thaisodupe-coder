@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react';
-import { X, FileText, ArrowDownToLine } from 'lucide-react';
+import { X, FileText, ArrowDown } from 'lucide-react';
 import type { Project } from '../data/projects';
 
 interface Props {
@@ -55,7 +55,7 @@ export default function ProjectModal({ project, onClose }: Props) {
               className={`group flex items-center gap-2 rounded-full bg-gradient-to-r ${project.gradient} px-4 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:scale-95`}
               title="Cuộn xuống cuối trang"
             >
-              <ArrowDownToLine size={16} className="group-hover:animate-bounce" />
+              <ArrowDown size={16} className="group-hover:animate-bounce" />
               Cuộn xuống
             </button>
             <button
