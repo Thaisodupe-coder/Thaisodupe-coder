@@ -33,36 +33,24 @@ export default function Summary() {
           rotate: -45deg;
           background: transparent;
           background-image:
-            radial-gradient(4px 100px at 0px 235px, rgb(96, 165, 250), #0000),
-            radial-gradient(4px 100px at 300px 235px, rgb(96, 165, 250), #0000),
-            radial-gradient(1.5px 1.5px at 150px 117.5px, rgb(96, 165, 250) 100%, #0000 150%),
-            radial-gradient(4px 100px at 0px 150px, rgb(56, 189, 248), #0000),
-            radial-gradient(4px 100px at 300px 150px, rgb(56, 189, 248), #0000),
-            radial-gradient(1.5px 1.5px at 150px 75px, rgb(56, 189, 248) 100%, #0000 150%),
-            radial-gradient(4px 100px at 0px 204px, rgb(129, 140, 248), #0000),
-            radial-gradient(4px 100px at 300px 204px, rgb(129, 140, 248), #0000),
-            radial-gradient(1.5px 1.5px at 150px 102px, rgb(129, 140, 248) 100%, #0000 150%),
-            radial-gradient(4px 100px at 0px 179px, rgb(167, 139, 250), #0000),
-            radial-gradient(4px 100px at 300px 179px, rgb(167, 139, 250), #0000),
-            radial-gradient(1.5px 1.5px at 150px 89.5px, rgb(167, 139, 250) 100%, #0000 150%),
-            radial-gradient(4px 100px at 0px 215px, rgb(192, 132, 252), #0000),
-            radial-gradient(4px 100px at 300px 215px, rgb(192, 132, 252), #0000),
-            radial-gradient(1.5px 1.5px at 150px 107.5px, rgb(192, 132, 252) 100%, #0000 150%),
-            radial-gradient(4px 100px at 0px 158px, rgb(96, 165, 250), #0000),
-            radial-gradient(4px 100px at 300px 158px, rgb(96, 165, 250), #0000),
-            radial-gradient(1.5px 1.5px at 150px 79px, rgb(96, 165, 250) 100%, #0000 150%);
+            radial-gradient(4px 100px at 0px 235px, rgb(191, 219, 254), #0000),
+            radial-gradient(4px 100px at 300px 235px, rgb(191, 219, 254), #0000),
+            radial-gradient(1.5px 1.5px at 150px 117.5px, rgb(191, 219, 254) 100%, #0000 150%),
+            radial-gradient(4px 100px at 0px 150px, rgb(199, 210, 254), #0000),
+            radial-gradient(4px 100px at 300px 150px, rgb(199, 210, 254), #0000),
+            radial-gradient(1.5px 1.5px at 150px 75px, rgb(199, 210, 254) 100%, #0000 150%),
+            radial-gradient(4px 100px at 0px 204px, rgb(221, 214, 254), #0000),
+            radial-gradient(4px 100px at 300px 204px, rgb(221, 214, 254), #0000),
+            radial-gradient(1.5px 1.5px at 150px 102px, rgb(221, 214, 254) 100%, #0000 150%);
           background-size:
             300px 235px, 300px 235px, 300px 235px,
             300px 150px, 300px 150px, 300px 150px,
-            300px 204px, 300px 204px, 300px 204px,
-            300px 179px, 300px 179px, 300px 179px,
-            300px 215px, 300px 215px, 300px 215px,
-            300px 158px, 300px 158px, 300px 158px;
-          animation: hi 150s linear infinite;
+            300px 204px, 300px 204px, 300px 204px;
+          animation: hi 200s linear infinite;
         }
         @keyframes hi {
-          0% { background-position: 0px 220px, 3px 220px, 151.5px 337.5px, 50px 16px, 53px 16px, 201.5px 91px, 100px 19px, 103px 19px, 251.5px 121px, 150px 31px, 153px 31px, 301.5px 120.5px, 200px 121px, 203px 121px, 351.5px 228.5px, 250px 26px, 253px 26px, 401.5px 105px; }
-          to { background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px, 50px 5416px, 53px 5416px, 201.5px 5491px, 100px 5119px, 103px 5119px, 251.5px 5221px, 150px 9876px, 153px 9876px, 301.5px 9965.5px, 200px 14741px, 203px 14741px, 351.5px 14848.5px, 250px 5082px, 253px 5082px, 401.5px 5161px; }
+          0% { background-position: 0px 220px, 3px 220px, 151.5px 337.5px, 50px 16px, 53px 16px, 201.5px 91px, 100px 19px, 103px 19px, 251.5px 121px; }
+          to { background-position: 0px 6800px, 3px 6800px, 151.5px 6917.5px, 50px 5416px, 53px 5416px, 201.5px 5491px, 100px 5119px, 103px 5119px, 251.5px 5221px; }
         }
       `}</style>
       <div className="particles-container z-0 pointer-events-none" />
