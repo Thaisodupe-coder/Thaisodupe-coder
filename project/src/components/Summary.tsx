@@ -33,15 +33,15 @@ export default function Summary() {
           rotate: -45deg;
           background: transparent;
           background-image:
-            radial-gradient(4px 100px at 0px 235px, rgb(191, 219, 254), #0000),
-            radial-gradient(4px 100px at 300px 235px, rgb(191, 219, 254), #0000),
-            radial-gradient(1.5px 1.5px at 150px 117.5px, rgb(191, 219, 254) 100%, #0000 150%),
-            radial-gradient(4px 100px at 0px 150px, rgb(199, 210, 254), #0000),
-            radial-gradient(4px 100px at 300px 150px, rgb(199, 210, 254), #0000),
-            radial-gradient(1.5px 1.5px at 150px 75px, rgb(199, 210, 254) 100%, #0000 150%),
-            radial-gradient(4px 100px at 0px 204px, rgb(221, 214, 254), #0000),
-            radial-gradient(4px 100px at 300px 204px, rgb(221, 214, 254), #0000),
-            radial-gradient(1.5px 1.5px at 150px 102px, rgb(221, 214, 254) 100%, #0000 150%);
+            radial-gradient(3px 80px at 45px 180px, rgb(191, 219, 254), #0000),
+            radial-gradient(4px 110px at 220px 60px, rgb(191, 219, 254), #0000),
+            radial-gradient(1.5px 1.5px at 130px 110px, rgb(191, 219, 254) 100%, #0000 150%),
+            radial-gradient(2.5px 90px at 80px 40px, rgb(199, 210, 254), #0000),
+            radial-gradient(4.5px 100px at 260px 120px, rgb(199, 210, 254), #0000),
+            radial-gradient(2px 2px at 175px 85px, rgb(199, 210, 254) 100%, #0000 150%),
+            radial-gradient(3.5px 115px at 25px 160px, rgb(221, 214, 254), #0000),
+            radial-gradient(2px 70px at 180px 25px, rgb(221, 214, 254), #0000),
+            radial-gradient(1.5px 1.5px at 285px 150px, rgb(221, 214, 254) 100%, #0000 150%);
           background-size:
             300px 235px, 300px 235px, 300px 235px,
             300px 150px, 300px 150px, 300px 150px,
