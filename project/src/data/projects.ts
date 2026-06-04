@@ -21,6 +21,8 @@ export interface Project {
   summary: string;
   icon: LucideIcon;
   gradient: string;
+  colorBg: string;
+  colorTextHover: string;
   objective: string;
   sections: ProjectSection[];
   tags?: string[];
@@ -35,6 +37,8 @@ export const projects: Project[] = [
     summary: 'Thiết lập cấu trúc thư mục phân cấp, áp dụng quy tắc đặt tên PascalCase và quản lý tệp tin hệ thống.',
     icon: FolderOpen,
     gradient: 'from-sky-500 to-blue-600',
+    colorBg: 'bg-sky-50/60 hover:bg-sky-100 border-sky-200',
+    colorTextHover: 'group-hover:text-sky-600',
     objective: 'Trình bày cấu trúc thư mục tối ưu và quy tắc đặt tên tệp thống nhất, đảm bảo tính nhất quán và tránh lỗi môi trường đa nền tảng.',
     sections: [
       {
@@ -67,6 +71,8 @@ export const projects: Project[] = [
     summary: 'Áp dụng 5 toán tử tìm kiếm nâng cao để nghiên cứu chuyên sâu về Fragile Base Class và Method Overriding trong Java.',
     icon: Search,
     gradient: 'from-orange-500 to-amber-600',
+    colorBg: 'bg-orange-50/60 hover:bg-orange-100 border-orange-200',
+    colorTextHover: 'group-hover:text-orange-600',
     objective: 'Áp dụng toán tử tìm kiếm nâng cao để tìm kiếm và đánh giá nguồn tin chuyên sâu về bài toán Fragile Base Class trong Java.',
     sections: [
       {
@@ -98,6 +104,8 @@ export const projects: Project[] = [
     summary: 'Áp dụng kỹ thuật Prompt Engineering (Role-playing, Chain-of-thought, Constraints) cho 3 tác vụ lập trình và toán học.',
     icon: MessageSquare,
     gradient: 'from-emerald-500 to-teal-600',
+    colorBg: 'bg-emerald-50/60 hover:bg-emerald-100 border-emerald-200',
+    colorTextHover: 'group-hover:text-emerald-600',
     objective: 'Trình bày sự cải tiến Prompt qua từng bước và so sánh chất lượng đầu ra trước/sau khi áp dụng kỹ thuật Prompt Engineering.',
     sections: [
       {
@@ -127,6 +135,8 @@ export const projects: Project[] = [
     summary: 'Phối hợp phát triển "Phần mềm Quản lý Thư viện Java" dùng Trello, Discord và Google Workspace.',
     icon: Users,
     gradient: 'from-violet-500 to-blue-600',
+    colorBg: 'bg-violet-50/60 hover:bg-violet-100 border-violet-200',
+    colorTextHover: 'group-hover:text-violet-600',
     objective: 'Minh chứng việc phối hợp trực tuyến hiệu quả trong dự án "Phần mềm Quản lý Thư viện Java", từ quản lý tiến độ đến giao tiếp và lưu trữ.',
     sections: [
       {
@@ -162,6 +172,8 @@ export const projects: Project[] = [
     summary: 'Sản xuất Infographic "Best Practices tối ưu Java 25" tích hợp Gemini, DALL-E 3 và Canva AI.',
     icon: Palette,
     gradient: 'from-rose-500 to-orange-500',
+    colorBg: 'bg-rose-50/60 hover:bg-rose-100 border-rose-200',
+    colorTextHover: 'group-hover:text-rose-600',
     objective: 'Trưng bày Infographic "Best Practices tối ưu Java 25" được sản xuất thông qua quy trình tích hợp đa công cụ AI tạo sinh.',
     sections: [
       {
@@ -191,6 +203,8 @@ export const projects: Project[] = [
     summary: 'Xây dựng bộ nguyên tắc cá nhân 6 điều về sử dụng AI trong môi trường học thuật và phát triển phần mềm.',
     icon: ShieldCheck,
     gradient: 'from-slate-500 to-sky-600',
+    colorBg: 'bg-slate-50 hover:bg-slate-100 border-slate-200',
+    colorTextHover: 'group-hover:text-sky-600',
     objective: 'Trình bày bộ nguyên tắc cá nhân về sử dụng AI trong môi trường học thuật, đảm bảo tính toàn vẹn học thuật và chất lượng kỹ thuật.',
     sections: [
       {

@@ -95,7 +95,7 @@ export default function About() {
         </div>
 
         {/* Nút Liên hệ viền xám */}
-        <button onClick={() => scrollTo('hero')} className="mt-16 rounded-lg border border-slate-300 px-10 py-4 text-base font-semibold text-slate-700 transition-all hover:bg-slate-100 hover:border-slate-400 hover:shadow-[0_0_15px_rgba(0,0,0,0.05)]">
+        <button onClick={() => scrollTo('hero')} className="mt-16 rounded-lg border border-slate-300 bg-white px-10 py-4 text-base font-semibold text-slate-700 transition-all duration-[400ms] hover:-translate-y-2.5 hover:shadow-[0_7px_0_-2px_#f85959,0_15px_0_-4px_#39a2db,0_16px_10px_-3px_#39a2db] active:-translate-y-1.5 active:duration-200 active:shadow-[0_2px_0_-2px_#f85959,0_8px_0_-4px_#39a2db,0_12px_10px_-3px_#39a2db]">
           Liên hệ
         </button>
       </div>

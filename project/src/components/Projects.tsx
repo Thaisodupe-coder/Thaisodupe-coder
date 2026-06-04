@@ -32,7 +32,7 @@ export default function Projects() {
             <button
               key={p.id}
               onClick={() => setSelected(p)}
-              className="card-glow group relative flex flex-col overflow-hidden rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 shadow-sm text-left hover:shadow-md transition-all"
+              className={`card-glow group relative flex flex-col overflow-hidden rounded-xl border shadow-sm text-left hover:shadow-md transition-all ${p.colorBg}`}
               style={{ animationDelay: `${i * 0.07}s` }}
             >
               {/* Top accent bar */}
@@ -48,7 +48,7 @@ export default function Projects() {
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-3 text-lg font-semibold leading-snug text-slate-900 group-hover:text-sky-600 transition-colors">
+                <h3 className={`mb-3 text-lg font-semibold leading-snug text-slate-900 transition-colors ${p.colorTextHover}`}>
                   {p.title}
                 </h3>
 
@@ -64,7 +64,7 @@ export default function Projects() {
                       <span key={t} className="tag text-xs px-2.5 py-1 bg-white text-slate-600 rounded-md border border-slate-200">{t}</span>
                     ))}
                   </div>
-                  <span className="flex items-center gap-1.5 text-sm text-slate-500 group-hover:text-sky-600 transition-colors">
+                  <span className={`flex items-center gap-1.5 text-sm text-slate-500 transition-colors ${p.colorTextHover}`}>
                     Chi tiết
                     <ExternalLink size={16} />
                   </span>
