@@ -8,11 +8,21 @@ export default function Projects() {
   const [selected, setSelected] = useState<Project | null>(null);
 
   return (
-    <section id="projects" className="relative px-6 py-24 bg-white">
-      {/* Subtle top divider glow */}
-      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 bg-gradient-to-r from-transparent via-sky-300 to-transparent" />
+    <section id="projects" className="relative px-6 py-24 overflow-hidden bg-white">
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img
+          src="/reports/trang3.jpg"
+          alt="Projects Background"
+          className="h-full w-full object-cover object-center opacity-50"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white" />
+      </div>
 
-      <div className="mx-auto max-w-6xl">
+      {/* Subtle top divider glow */}
+      <div className="pointer-events-none absolute top-0 left-1/2 -translate-x-1/2 h-px w-3/4 bg-gradient-to-r from-transparent via-sky-300 to-transparent z-10" />
+
+      <div className="relative z-10 mx-auto max-w-6xl">
         {/* Section header */}
         <div className="mb-16 text-center">
           <p className="text-sm font-medium uppercase tracking-widest text-sky-600 mb-4 font-sans">

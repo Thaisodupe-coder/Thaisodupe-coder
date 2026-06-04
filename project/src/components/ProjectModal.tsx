@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
-import { X, FileText } from 'lucide-react';
+import { useEffect, useRef } from 'react';
+import { X, FileText, ArrowDownToLine } from 'lucide-react';
 import type { Project } from '../data/projects';
 
 interface Props {
@@ -8,6 +8,17 @@ interface Props {
 }
 
 export default function ProjectModal({ project, onClose }: Props) {
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    if (scrollRef.current) {
+      scrollRef.current.scrollTo({
+        top: scrollRef.current.scrollHeight,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);
@@ -24,7 +35,7 @@ export default function ProjectModal({ project, onClose }: Props) {
       style={{ background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(6px)' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="modal-panel relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl">
+      <div ref={scrollRef} className="modal-panel relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl">
         {/* Header */}
         <div className="sticky top-0 z-10 flex items-start justify-between gap-4 rounded-t-2xl border-b border-slate-200 bg-white px-8 py-6">
           <div className="flex items-center gap-3 min-w-0">
@@ -32,7 +43,17 @@ export default function ProjectModal({ project, onClose }: Props) {
               <project.icon size={20} className="text-white" />
             </div>
             <div className="min-w-0">
-              <p className="font-mono text-sm text-slate-500 mb-1">{project.badge}</p>
+              <div className="mb-1 flex items-center gap-3">
+                <p className="font-mono text-sm text-slate-500">{project.badge}</p>
+                <button
+                  onClick={scrollToBottom}
+                  className="group flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-slate-500 transition-all hover:bg-slate-100 hover:text-slate-800"
+                  title="Cuộn xuống cuối trang"
+                >
+                  <ArrowDownToLine size={12} className="transition-transform group-hover:translate-y-0.5" />
+                  Cuộn xuống
+                </button>
+              </div>
               <h2 className="text-xl font-bold text-slate-900 leading-snug">{project.title}</h2>
             </div>
           </div>

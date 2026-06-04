@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import { Code } from 'lucide-react';
 
 const sections = [
   { id: 'hero', label: 'Giới thiệu', activeText: 'text-violet-600', hoverText: 'hover:text-violet-600', underlineBg: 'bg-violet-600' },
@@ -49,8 +48,12 @@ export default function Navbar() {
           onClick={() => scrollTo('hero')}
           className="group flex items-center gap-3 transition-all duration-300 hover:-translate-y-1"
         >
-          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-600 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
-            <Code size={20} className="text-white" />
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-white p-1 border border-violet-500/30 shadow-sm transition-all duration-300 group-hover:scale-105 group-hover:shadow-md">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/vi/b/bf/Logo_HUET.svg" 
+              alt="UET Logo" 
+              className="h-full w-full object-contain"
+            />
           </div>
           <span className="font-sans text-lg font-bold tracking-wide text-slate-800 transition-colors duration-300 group-hover:text-sky-600">
             Nguyễn Quốc Thái
