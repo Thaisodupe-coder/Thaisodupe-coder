@@ -44,7 +44,9 @@ export default function Projects() {
                   <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${p.gradient} shadow-lg`}>
                     <p.icon size={24} className="text-white" />
                   </div>
-                  <span className="font-mono text-sm text-slate-500">{p.badge}</span>
+                  <span className={`inline-flex items-center rounded-full bg-white px-3 py-1 text-xs font-bold uppercase tracking-wider shadow-sm border ${p.btnBorder} ${p.btnTextHover}`}>
+                    {p.badge}
+                  </span>
                 </div>
 
                 {/* Title */}
@@ -64,9 +66,12 @@ export default function Projects() {
                       <span key={t} className="tag text-xs px-2.5 py-1 bg-white text-slate-600 rounded-md border border-slate-200">{t}</span>
                     ))}
                   </div>
-                  <span className={`flex items-center gap-1.5 text-sm text-slate-500 transition-colors ${p.colorTextHover}`}>
-                    Chi tiết
-                    <ExternalLink size={16} />
+                  <span className={`flex items-center gap-1.5 text-sm font-bold transition-all duration-300 group-hover:translate-x-1.5 ${p.btnTextHover}`}>
+                    <span className="relative">
+                      Chi tiết
+                      <span className="absolute -bottom-0.5 left-0 h-[2px] w-0 bg-current transition-all duration-300 ease-out group-hover:w-full" />
+                    </span>
+                    <ExternalLink size={16} className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
                   </span>
                 </div>
               </div>
