@@ -35,9 +35,9 @@ export default function ProjectModal({ project, onClose }: Props) {
       style={{ background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(6px)' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div ref={scrollRef} className="modal-panel relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl">
+      <div className="modal-panel relative flex flex-col max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
         {/* Header */}
-        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 rounded-t-2xl border-b border-slate-200 bg-white px-8 py-6">
+        <div className="z-10 flex items-start justify-between gap-4 border-b border-slate-200 bg-white/95 px-8 py-6 backdrop-blur shadow-sm">
           <div className="flex items-center gap-3 min-w-0">
             <div className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${project.gradient}`}>
               <project.icon size={20} className="text-white" />
@@ -57,8 +57,8 @@ export default function ProjectModal({ project, onClose }: Props) {
           </button>
         </div>
 
-        {/* Body */}
-        <div className="px-8 py-8 space-y-8">
+        {/* Body (Phần này sẽ là phần cuộn riêng biệt) */}
+        <div ref={scrollRef} className="overflow-y-auto px-8 py-8 pb-28 space-y-8">
           {/* Objective */}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-widest text-sky-600 font-sans">
@@ -152,10 +152,10 @@ export default function ProjectModal({ project, onClose }: Props) {
         {/* Nút Cuộn xuống được thiết kế lại, nổi bật hơn */}
         <button
           onClick={scrollToBottom}
-          className="sticky bottom-6 right-6 z-20 ml-auto mr-6 flex h-12 w-12 items-center justify-center rounded-full bg-sky-600 text-white shadow-lg ring-2 ring-white/50 transition-all duration-300 hover:bg-sky-700 hover:scale-110 active:scale-100"
+          className="absolute bottom-8 right-8 z-20 flex h-12 w-12 items-center justify-center rounded-full bg-sky-600 text-white shadow-[0_0_15px_rgba(14,165,233,0.5)] ring-2 ring-white/80 transition-all duration-300 hover:bg-sky-500 hover:scale-110 hover:shadow-[0_0_25px_rgba(14,165,233,0.6)] active:scale-95"
           title="Cuộn xuống cuối trang"
         >
-          <ArrowDownToLine size={20} />
+          <ArrowDownToLine size={20} className="animate-bounce" />
         </button>
       </div>
     </div>

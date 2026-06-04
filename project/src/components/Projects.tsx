@@ -42,11 +42,14 @@ export default function Projects() {
             <button
               key={p.id}
               onClick={() => setSelected(p)}
-            className="card-glow group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white text-left shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            className={`card-glow group relative flex flex-col overflow-hidden rounded-2xl border border-white/60 text-left shadow-lg backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-white/90 hover:shadow-2xl ${p.colorBg || 'bg-slate-50/90'}`}
             style={{ animationDelay: `${i * 0.07}s` }}
             >
-              {/* Top accent bar */}
-              <div className={`h-0.5 w-full bg-gradient-to-r ${p.gradient}`} />
+              {/* Lớp phủ sáng mờ lên toàn bộ thẻ khi di chuột */}
+              <div className={`absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-[0.04] bg-gradient-to-br ${p.gradient}`} />
+
+              {/* Top accent bar (đã làm dày hơn để nổi bật màu sắc) */}
+              <div className={`h-1.5 w-full bg-gradient-to-r ${p.gradient}`} />
 
               <div className="flex flex-1 flex-col p-5">
                 {/* Icon + badge */}
