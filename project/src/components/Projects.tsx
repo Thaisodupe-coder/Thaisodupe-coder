@@ -42,16 +42,16 @@ export default function Projects() {
             <button
               key={p.id}
               onClick={() => setSelected(p)}
-            className={`card-glow group relative flex flex-col overflow-hidden rounded-2xl border border-white/60 text-left shadow-lg backdrop-blur-sm transition-all duration-500 hover:-translate-y-2 hover:border-white/90 hover:shadow-2xl ${p.colorBg || 'bg-slate-50/90'}`}
+            className="card-glow group relative flex flex-col overflow-hidden rounded-2xl border border-slate-100 bg-white text-left shadow-lg transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
             style={{ animationDelay: `${i * 0.07}s` }}
             >
-              {/* Lớp phủ sáng mờ lên toàn bộ thẻ khi di chuột */}
-              <div className={`absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-[0.04] bg-gradient-to-br ${p.gradient}`} />
+              {/* Lớp nền màu pastel (tự động theo màu thẻ) không trong suốt, đậm lên khi hover */}
+              <div className={`absolute inset-0 opacity-[0.12] transition-opacity duration-500 group-hover:opacity-[0.25] bg-gradient-to-br ${p.gradient}`} />
 
               {/* Top accent bar (đã làm dày hơn để nổi bật màu sắc) */}
-              <div className={`h-1.5 w-full bg-gradient-to-r ${p.gradient}`} />
+              <div className={`relative z-10 h-1.5 w-full bg-gradient-to-r ${p.gradient}`} />
 
-              <div className="flex flex-1 flex-col p-5">
+              <div className="relative z-10 flex flex-1 flex-col p-5">
                 {/* Icon + badge */}
                 <div className="mb-4 flex items-start justify-between">
                   <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br ${p.gradient} shadow-lg`}>
