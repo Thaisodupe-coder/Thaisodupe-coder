@@ -12,9 +12,9 @@ export default function About() {
         <img
           src="https://vietjack.me/storage/uploads/images/526/dai-hoc-cong-nghe-3-1659687487.jpg"
           alt="UET Background"
-          className="h-full w-full object-cover object-center opacity-50"
+          className="h-full w-full object-cover object-center opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-white" />
       </div>
 
       {/* Divider phía trên */}

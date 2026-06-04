@@ -14,9 +14,9 @@ export default function Projects() {
         <img
           src="/reports/trang3.jpg"
           alt="Projects Background"
-          className="h-full w-full object-cover object-center opacity-50"
+          className="h-full w-full object-cover object-center opacity-70"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/60 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white via-white/30 to-white" />
       </div>
 
       {/* Subtle top divider glow */}
@@ -42,8 +42,8 @@ export default function Projects() {
             <button
               key={p.id}
               onClick={() => setSelected(p)}
-              className={`card-glow group relative flex flex-col overflow-hidden rounded-xl border shadow-sm text-left hover:shadow-md transition-all ${p.colorBg}`}
-              style={{ animationDelay: `${i * 0.07}s` }}
+            className="card-glow group relative flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white text-left shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+            style={{ animationDelay: `${i * 0.07}s` }}
             >
               {/* Top accent bar */}
               <div className={`h-0.5 w-full bg-gradient-to-r ${p.gradient}`} />

@@ -45,14 +45,6 @@ export default function ProjectModal({ project, onClose }: Props) {
             <div className="min-w-0">
               <div className="mb-1 flex items-center gap-3">
                 <p className="font-mono text-sm text-slate-500">{project.badge}</p>
-                <button
-                  onClick={scrollToBottom}
-                  className="group flex items-center gap-1 rounded-full border border-slate-200 bg-slate-50 px-2.5 py-0.5 text-[11px] font-semibold uppercase tracking-wide text-slate-500 transition-all hover:bg-slate-100 hover:text-slate-800"
-                  title="Cuộn xuống cuối trang"
-                >
-                  <ArrowDownToLine size={12} className="transition-transform group-hover:translate-y-0.5" />
-                  Cuộn xuống
-                </button>
               </div>
               <h2 className="text-xl font-bold text-slate-900 leading-snug">{project.title}</h2>
             </div>
@@ -156,6 +148,15 @@ export default function ProjectModal({ project, onClose }: Props) {
             </div>
           )}
         </div>
+
+        {/* Nút Cuộn xuống được thiết kế lại, nổi bật hơn */}
+        <button
+          onClick={scrollToBottom}
+          className="sticky bottom-6 right-6 z-20 ml-auto mr-6 flex h-12 w-12 items-center justify-center rounded-full bg-sky-600 text-white shadow-lg ring-2 ring-white/50 transition-all duration-300 hover:bg-sky-700 hover:scale-110 active:scale-100"
+          title="Cuộn xuống cuối trang"
+        >
+          <ArrowDownToLine size={20} />
+        </button>
       </div>
     </div>
   );

@@ -87,8 +87,8 @@ export default function Hero() {
             alt="Công nghệ thông tin"
             className="h-full w-full object-cover object-center"
           />
-          {/* Lớp phủ gradient để hòa trộn ảnh vào background tối */}
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-50/40 to-transparent lg:bg-gradient-to-r lg:from-slate-50 lg:via-slate-50/50 lg:to-transparent" />
+          {/* Lớp phủ gradient để hòa trộn ảnh vào background tối (đã giảm trắng) */}
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-50 via-slate-50/20 to-transparent lg:bg-gradient-to-r lg:from-slate-50 lg:via-slate-50/20 lg:to-transparent" />
         </div>
 
       </div>
