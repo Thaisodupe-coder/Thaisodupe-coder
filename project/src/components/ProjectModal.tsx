@@ -92,6 +92,29 @@ export default function ProjectModal({ project, onClose }: Props) {
           {/* Report Button */}
           {project.reportFile && (
             <div className="mt-8 flex justify-center border-t border-slate-200 pt-6">
+              <style>{`
+                @keyframes rotate624 {
+                  0% { transform: rotate(0deg) translate3d(0, 0, 0); }
+                  25% { transform: rotate(3deg) translate3d(0, 0, 0); }
+                  50% { transform: rotate(-3deg) translate3d(0, 0, 0); }
+                  75% { transform: rotate(1deg) translate3d(0, 0, 0); }
+                  100% { transform: rotate(0deg) translate3d(0, 0, 0); }
+                }
+                @keyframes storm1261 {
+                  0% { transform: translate3d(0, 0, 0) translateZ(0); }
+                  25% { transform: translate3d(4px, 0, 0) translateZ(0); }
+                  50% { transform: translate3d(-3px, 0, 0) translateZ(0); }
+                  75% { transform: translate3d(2px, 0, 0) translateZ(0); }
+                  100% { transform: translate3d(0, 0, 0) translateZ(0); }
+                }
+                .btn-shine-effect:hover {
+                  animation: rotate624 0.7s ease-in-out both;
+                }
+                .btn-shine-effect:hover span {
+                  animation: storm1261 0.7s ease-in-out both;
+                  animation-delay: 0.06s;
+                }
+              `}</style>
               <a
                 href={
                   project.reportFile.endsWith('.docx')
@@ -102,10 +125,12 @@ export default function ProjectModal({ project, onClose }: Props) {
                 }
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-lg bg-violet-600 px-6 py-3 font-semibold text-white shadow-[0_0_15px_rgba(124,58,237,0.3)] transition-all hover:bg-violet-500 hover:shadow-[0_0_25px_rgba(124,58,237,0.6)]"
+                className="btn-shine-effect relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-[10px] border border-[rgba(22,76,167,0.6)] bg-white px-[35px] py-[17px] text-[#1d89ff] no-underline outline-none transition-all duration-300 ease-[cubic-bezier(0.02,0.01,0.47,1)] after:absolute after:-left-[75px] after:-top-[50px] after:-z-10 after:h-[155px] after:w-[50px] after:rotate-[35deg] after:bg-[#38ef7d] after:opacity-40 after:transition-all after:duration-[550ms] after:ease-[cubic-bezier(0.19,1,0.22,1)] hover:after:left-[120%]"
               >
-                <FileText size={20} className="transition-transform group-hover:-translate-y-0.5" />
-                Xem Báo Cáo Chi Tiết
+                <span className="relative z-20 flex items-center gap-2 text-[14px] font-medium uppercase tracking-[0.7px] text-[#164ca7]">
+                  <FileText size={20} />
+                  Xem Báo Cáo Chi Tiết
+                </span>
               </a>
             </div>
           )}

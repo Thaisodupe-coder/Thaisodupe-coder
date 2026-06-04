@@ -52,12 +52,12 @@ export const projects: Project[] = [
 └── KetQua/`,
       },
       {
-        heading: 'Quy tắc áp dụng',
+        heading: 'Các thao tác thực hành chi tiết',
         items: [
-          'Thiết lập cấu trúc thư mục <span class="font-mono text-sky-600">phân cấp rõ ràng</span> trên ổ đĩa cục bộ, bắt đầu bằng thư mục gốc <span class="font-mono text-orange-600">ThucHanh_NguyenQuocThai</span>.',
-          'Áp dụng quy tắc đặt tên <span class="font-mono text-sky-600">PascalCase</span> — viết hoa chữ cái đầu mỗi từ, không dấu — tránh lỗi trên môi trường Linux/macOS.',
-          'Ví dụ tên tệp hợp lệ: <span class="font-mono text-orange-600">GhiChuQuanTrong.txt</span>, <span class="font-mono text-orange-600">DiChuyen.txt</span>.',
-          'Thực hành các thao tác: New Folder, Rename, Copy/Cut & Paste để thuần thục quản lý hệ thống tệp.',
+          '<strong>Tạo lập và Tổ chức:</strong> Thiết lập không gian lưu trữ với thư mục gốc <span class="font-mono text-sky-600">ThucHanh_NguyenQuocThai</span> và phân cấp logic bằng các thư mục con (như <span class="font-mono text-orange-600">TaiLieu</span>) trên phân vùng ổ đĩa an toàn (không thuộc ổ hệ thống C:).',
+          '<strong>Quy tắc định danh:</strong> Áp dụng triệt để quy tắc <span class="font-mono text-emerald-600">PascalCase</span> (viết hoa chữ cái đầu của mỗi từ, không sử dụng dấu tiếng Việt hay khoảng trắng) cho mọi tệp tin nhằm đảm bảo tính tương thích đa nền tảng.',
+          '<strong>Điều hướng dữ liệu:</strong> Thực hành nhuần nhuyễn việc quản lý vòng đời tệp tin: Từ khởi tạo văn bản, đổi tên (<span class="font-mono text-sky-600">Rename</span>), đến việc sao chép (<span class="font-mono text-sky-600">Copy/Paste</span>) và di chuyển tệp tin (<span class="font-mono text-sky-600">Cut/Paste</span>) giữa các phân vùng thư mục một cách chính xác.',
+          '<strong>Bảo mật và Phục hồi:</strong> Nắm vững sự khác biệt giữa thao tác xóa tạm thời (đưa vào Recycle Bin) và thao tác xóa vĩnh viễn (<span class="font-mono text-red-500">Shift + Delete</span>). Trực tiếp thực hành các bước khôi phục (Restore) tệp tin quan trọng từ thùng rác về vị trí cũ.'
         ],
       },
     ],
@@ -76,21 +76,19 @@ export const projects: Project[] = [
     objective: 'Áp dụng toán tử tìm kiếm nâng cao để tìm kiếm và đánh giá nguồn tin chuyên sâu về bài toán Fragile Base Class trong Java.',
     sections: [
       {
-        heading: 'Chiến lược tìm kiếm (5 toán tử)',
+        heading: 'Chiến lược tìm kiếm nâng cao',
         items: [
-          '<span class="font-mono text-sky-600">intitle:"fragile base class" site:ieee.org OR site:springer.com</span> — Lọc bài báo khoa học trên IEEE/Springer có tiêu đề chứa từ khóa.',
-          '<span class="font-mono text-sky-600">"Fragile Base Class" AND "Method Overriding" filetype:pdf</span> — Tìm tài liệu PDF chứa chính xác 2 cụm từ.',
-          '<span class="font-mono text-sky-600">author:"Joshua Bloch" AND "Effective Java" inheritance</span> — Tìm best practices từ tác giả kiến trúc Java Core.',
-          '<span class="font-mono text-sky-600">(composition OR inheritance) AND "best practices" "Java"</span> — So sánh hai kỹ thuật thiết kế.',
-          '<span class="font-mono text-sky-600">"Fragile Base Class" -C++ "Java"</span> — Loại trừ ngôn ngữ C++ để tránh nhiễu kết quả.',
+          'Sử dụng các toán tử <span class="font-mono text-sky-600">intitle:</span> kết hợp <span class="font-mono text-sky-600">site:</span> (như ieee.org, springer.com) để thu hẹp phạm vi kết quả vào các kho dữ liệu khoa học uy tín, tìm đích danh tiêu đề "Fragile Base Class".',
+          'Áp dụng linh hoạt các toán tử logic <span class="font-mono text-sky-600">AND, OR</span> và đặc biệt là toán tử loại trừ <span class="font-mono text-sky-600">-C++</span> để khử nhiễu, đảm bảo kết quả chỉ tập trung vào ngôn ngữ Java.',
+          'Truy vết chuyên gia bằng toán tử <span class="font-mono text-sky-600">author:</span> (ví dụ: "Joshua Bloch" kết hợp "Effective Java") nhằm tham khảo các Best Practices từ chính kiến trúc sư trưởng của JDK lõi.'
         ],
       },
       {
-        heading: 'Đánh giá nguồn & kết luận',
+        heading: 'Phân tích tài liệu và Đánh giá',
         items: [
-          'Đánh giá <span class="font-mono text-orange-600">10 nguồn học thuật</span> (Mikhajlov, Businge, Snyder...) dựa trên 5 tiêu chí: Tác giả, Cơ quan xuất bản, Phương pháp, Trích dẫn, Tính cập nhật.',
-          'Kết quả: Lạm dụng ghi đè <span class="text-red-600">phá vỡ tính đóng gói</span> và gây ra Fragile Base Class Problem.',
-          'Khuyến nghị: Ưu tiên <span class="text-emerald-600 font-medium">Composition (Tổng hợp)</span> hơn <span class="text-slate-500">Inheritance (Kế thừa)</span> theo nguyên tắc của Effective Java.',
+          '<strong>Thẩm định 10 nguồn học thuật:</strong> Phân loại độ tin cậy của các bài báo, sách chuyên khảo (từ năm 1986 đến 2024) dựa trên 5 tiêu chí khắt khe: Tác giả, Cơ quan xuất bản, Phương pháp nghiên cứu, Số lượng trích dẫn và Tính cập nhật.',
+          '<strong>Vạch trần bản chất FBC:</strong> Các nghiên cứu kinh điển và hiện đại đều chỉ ra rằng: Lạm dụng ghi đè phương thức (Method Overriding) phá vỡ tính đóng gói. Cơ chế đa hình động khiến lớp con phụ thuộc quá chặt vào cài đặt ẩn của lớp cha, làm hệ thống giòn vỡ và dễ sinh lỗi đệ quy khi thư viện gốc được cập nhật.',
+          '<strong>Giải pháp Kiến trúc:</strong> Áp dụng triệt để khuyến nghị từ giới học thuật: "Thiết kế rõ ràng cho việc kế thừa, nếu không thì phải cấm nó" bằng từ khóa <span class="font-mono text-emerald-600">final</span>. Đồng thời, biến nguyên tắc <span class="text-orange-600 font-medium">Ưu tiên Tổng hợp hơn Kế thừa (Composition over Inheritance)</span> thành tiêu chuẩn mặc định khi thiết kế hệ thống OOP.'
         ],
       },
     ],
@@ -109,19 +107,20 @@ export const projects: Project[] = [
     objective: 'Trình bày sự cải tiến Prompt qua từng bước và so sánh chất lượng đầu ra trước/sau khi áp dụng kỹ thuật Prompt Engineering.',
     sections: [
       {
-        heading: '3 tác vụ thực hành',
+        heading: 'Quá trình tinh chỉnh Prompt qua 3 tác vụ',
         items: [
-          '<span class="text-sky-600 font-medium">Tác vụ 1 — Tóm tắt API JavaFX:</span> Nâng cấp từ "Tóm tắt API" thành prompt đóng vai Senior Dev, yêu cầu giải quyết bài toán <span class="font-mono text-orange-600">Thread-safety</span> (updateMessage lên UI Thread).',
-          '<span class="text-sky-600 font-medium">Tác vụ 2 — Giải thích tính đa hình:</span> Yêu cầu AI giải thích sâu cơ chế <span class="font-mono text-orange-600">Dynamic Method Dispatch</span> ở tầng JVM thay vì chỉ nêu định nghĩa bề mặt.',
-          '<span class="text-sky-600 font-medium">Tác vụ 3 — Tạo đề toán Giải tích 2:</span> Yêu cầu cụ thể xuất ra bằng mã <span class="font-mono text-orange-600">LaTeX</span>, bao quát đạo hàm hướng, vi phân toàn phần, kèm lời giải chi tiết.',
+          '<strong>Tác vụ 1 (JavaFX Concurrency):</strong> Từ một câu lệnh chung chung "Tóm tắt API", đã nâng cấp thành cấu trúc yêu cầu AI đóng vai Senior Dev, tập trung phân tích sâu việc sử dụng Task/Service thay vì Thread thuần nhằm giải quyết bài toán <span class="text-orange-600 font-medium">Thread-safety</span> khi cập nhật UI.',
+          '<strong>Tác vụ 2 (Bản chất Đa hình):</strong> Buộc AI từ bỏ việc định nghĩa lý thuyết suông để chuyển sang giải thích cơ chế <span class="text-orange-600 font-medium">Dynamic Method Dispatch</span> nằm sâu dưới tầng JVM. Việc gán vai Giảng viên đã giúp AI đưa ra các ví dụ trực quan, hỗ trợ hiểu sâu thay vì học vẹt.',
+          '<strong>Tác vụ 3 (Toán Giải tích 2):</strong> Tối ưu hóa việc sinh bộ câu hỏi trắc nghiệm Toán bằng cách ràng buộc rõ các chủ đề (đạo hàm hướng, vi phân toàn phần) và ép buộc AI xuất kết quả bằng định dạng mã <span class="font-mono text-sky-600">LaTeX</span> kèm lời giải chi tiết theo từng bước.'
         ],
       },
       {
-        heading: 'Kỹ thuật áp dụng',
+        heading: '4 Nguyên tắc cốt lõi của Prompt Engineering',
         items: [
-          '<span class="font-mono text-sky-600">Role-playing</span>: Gán vai trò cụ thể (Senior Dev, Giáo sư Toán) để định hướng ngữ cảnh.',
-          '<span class="font-mono text-sky-600">Chain-of-thought</span>: Yêu cầu AI trình bày lập luận từng bước trước khi đưa ra kết luận.',
-          '<span class="font-mono text-sky-600">Specific Constraints</span>: Ràng buộc format đầu ra (LaTeX, code block), độ sâu kỹ thuật và phạm vi nội dung.',
+          '<span class="text-sky-600 font-medium">Ràng buộc kỹ thuật cụ thể (Specificity):</span> Luôn giới hạn rõ ràng thư viện, phiên bản và tình huống sử dụng để tránh việc AI sinh ra các hàm cũ hoặc gây lỗi (như IllegalStateException).',
+          '<span class="text-sky-600 font-medium">Tư duy theo bước (Chain-of-thought):</span> Yêu cầu AI trình bày logic suy luận tuần tự từ bản chất đến thực thi, cực kỳ hiệu quả khi cần gỡ lỗi (debug) các đoạn mã phức tạp.',
+          '<span class="text-sky-600 font-medium">Gán vai chuyên gia (Role-Playing):</span> Định hướng AI đóng các vai trò cụ thể để tự động điều chỉnh thuật ngữ, tông giọng và chiều sâu kiến thức cho phù hợp với dự án.',
+          '<span class="text-sky-600 font-medium">Kiểm soát định dạng đầu ra:</span> Lợi dụng sức mạnh của Markdown, Bảng biểu hoặc LaTeX để dữ liệu AI trả về có cấu trúc hoàn chỉnh, sẵn sàng sao chép và tái sử dụng ngay.'
         ],
       },
     ],
@@ -140,25 +139,18 @@ export const projects: Project[] = [
     objective: 'Minh chứng việc phối hợp trực tuyến hiệu quả trong dự án "Phần mềm Quản lý Thư viện Java", từ quản lý tiến độ đến giao tiếp và lưu trữ.',
     sections: [
       {
-        heading: 'Trello — quản lý tiến độ',
+        heading: 'Thiết lập Không gian làm việc số',
         items: [
-          'Xây dựng bảng Kanban <span class="font-mono text-sky-600">4 cột</span>: Backlog → Doing → Review → Done.',
-          'Áp dụng <span class="text-orange-600">nhãn màu</span> phân loại task: JavaFX, Database, Báo cáo.',
-          'Thiết lập <span class="font-mono text-sky-600">Due Date</span> chặt chẽ, gắn assignee rõ ràng cho từng card.',
+          '<strong>Trello (Điều phối tiến độ):</strong> Xây dựng bảng Kanban 4 cột tiêu chuẩn (Backlog, Doing, Review, Done). Tối ưu hóa việc phân chia công việc bằng cách sử dụng Thẻ nhãn màu (Label) theo module (JavaFX, Database), tích hợp Checklist bên trong từng thẻ và gán Due Date chặt chẽ.',
+          '<strong>Discord (Giao tiếp nhóm):</strong> Tổ chức server chuyên biệt, phân tách rõ ràng luồng thông tin thành các kênh: <span class="font-mono text-sky-600">#thong-bao-chung</span> (chỉ nhận thông báo) và <span class="font-mono text-sky-600">#thao-luan-code</span>. Tận dụng Voice Channel và tính năng Share Screen để thiết lập các buổi Pair-programming trực tiếp.',
+          '<strong>Google Workspace (Lưu trữ đồng bộ):</strong> Áp dụng quy tắc đặt tên tệp thống nhất tuyệt đối theo cú pháp <span class="font-mono text-orange-600">[MãTask]_[Nộidung]_[Tácgiả]</span>, kết hợp phân quyền truy cập nghiêm ngặt thư mục hệ thống.'
         ],
       },
       {
-        heading: 'Discord — giao tiếp & debug',
+        heading: 'Xử lý các Thách thức trong Cộng tác ảo',
         items: [
-          'Phân chia kênh rõ ràng: <span class="font-mono text-orange-600">#thong-bao-chung</span>, <span class="font-mono text-orange-600">#thao-luan-code</span>.',
-          'Sử dụng tính năng <span class="text-sky-600">Thread</span> để giải quyết tình trạng trôi thông báo khi debug session kéo dài.',
-        ],
-      },
-      {
-        heading: 'Google Workspace — tài liệu',
-        items: [
-          'Cấu trúc Drive với <span class="text-sky-600">phân quyền nghiêm ngặt</span> — tránh ghi đè tệp nhau.',
-          'Áp dụng chế độ <span class="font-mono text-orange-600">Suggesting</span> (Đề xuất) trên Google Docs, giải quyết triệt để việc ghi đè nội dung.',
+          '<strong>Vấn đề trôi thông báo quan trọng:</strong> Khi các buổi tranh luận tìm Bug code kéo dài làm loãng kênh chat, nhóm đã áp dụng tính năng <span class="text-emerald-600 font-medium">Thread (Luồng hội thoại phụ)</span> trên Discord để đóng gói từng chủ đề lại, giữ cho kênh chính luôn gọn gàng.',
+          '<strong>Sự cố xung đột nội dung văn bản:</strong> Gặp tình trạng ghi đè xóa mất dữ liệu của nhau khi nhiều người cùng chỉnh sửa file Docs. Nhanh chóng chuyển đổi toàn bộ quy trình sang chế độ <span class="text-emerald-600 font-medium">Suggesting (Đề xuất)</span>, yêu cầu tác giả gốc phải kiểm duyệt chéo và Accept mới được áp dụng.'
         ],
       },
     ],
@@ -177,19 +169,19 @@ export const projects: Project[] = [
     objective: 'Trưng bày Infographic "Best Practices tối ưu Java 25" được sản xuất thông qua quy trình tích hợp đa công cụ AI tạo sinh.',
     sections: [
       {
-        heading: 'Quy trình tích hợp AI',
+        heading: 'Quy trình tích hợp đa công cụ (3 Giai đoạn)',
         items: [
-          '<span class="text-sky-600 font-medium">Google Gemini:</span> Phân tích kỹ thuật, lập dàn ý về <span class="font-mono text-orange-600">ZGC (Z Garbage Collector)</span>, xử lý Thread Pool và sinh code so sánh hiệu năng String/StringBuilder.',
-          '<span class="text-sky-600 font-medium">DALL-E 3:</span> Trực quan hóa khái niệm trừu tượng (vùng nhớ Eden, Survivor) bằng prompt chi tiết với dark theme & neon colors.',
-          '<span class="text-sky-600 font-medium">Canva AI (Magic Design):</span> Xây dựng bố cục Infographic từ text — can thiệp thủ công <span class="text-orange-600 font-medium">70%</span> để tái cấu trúc lưới và font Monospace cho code blocks.',
+          '<strong>Giai đoạn 1 (Lên ý tưởng - Google Gemini):</strong> Đóng vai Senior Dev yêu cầu AI lập dàn ý về ZGC, Thread Pool và quản lý String trong Java. AI hỗ trợ sinh mã nguồn, nhưng sinh viên phải trực tiếp can thiệp <span class="text-orange-600 font-medium">60%</span> để chỉnh sửa cú pháp và bổ sung hàm đo lường thời gian thực thi <span class="font-mono text-slate-500">System.nanoTime</span>.',
+          '<strong>Giai đoạn 2 (Trực quan hóa - DALL-E 3):</strong> Sử dụng kỹ thuật prompt tạo ảnh phẳng (flat vector) với tone màu Dark-neon để trực quan hóa quá trình thu gom rác bộ nhớ. AI tạo hình khối tốt nhưng thất bại hoàn toàn khi sinh text, yêu cầu sinh viên phải sử dụng phần mềm ngoài để cắt cúp và tự chèn Text Label thủ công (<span class="text-orange-600 font-medium">Can thiệp 50%</span>).',
+          '<strong>Giai đoạn 3 (Bố cục tự động - Canva AI):</strong> Áp dụng công cụ Magic Design chuyển khối Text thành Layout Infographic. Tuy nhiên, AI không hiểu đặc thù của code, khiến sinh viên phải tái cấu trúc toàn bộ lưới (Grid) và thiết lập lại font chữ Monospace cho các khối lệnh (<span class="text-orange-600 font-medium">Can thiệp 70%</span>).'
         ],
       },
       {
-        heading: 'Chủ đề nội dung',
+        heading: 'Đánh giá AI và Đạo đức sáng tạo',
         items: [
-          'ZGC — Z Garbage Collector: cơ chế và lợi thế với GC pause < 1ms.',
-          'Thread Pool optimization: cấu hình <span class="font-mono text-sky-600">ExecutorService</span> tối ưu.',
-          'String vs StringBuilder: so sánh hiệu năng qua benchmark code.',
+          '<strong>AI là "Cỗ máy dựng Mockup":</strong> Quá trình làm việc chứng minh AI giúp phá vỡ rào cản khởi đầu, tạo ra vật liệu thô cực nhanh, nhưng tuyệt đối không thể thay thế tư duy sắp xếp kiến trúc của kỹ sư.',
+          '<strong>Nguy cơ ảo giác cực độ:</strong> Việc phụ thuộc AI khi sinh các đoạn code đa luồng tiềm ẩn nguy cơ AI bịa đặt các API không tồn tại. Mọi thông tin đều phải được đối chiếu với tài liệu Official.',
+          '<strong>Minh bạch trong học thuật:</strong> Cần rạch ròi ranh giới giữa việc "sử dụng AI để cấu trúc tư duy" và "đạo văn mã nguồn". Báo cáo đã trung thực lượng hóa tỷ lệ % đóng góp của sinh viên vào từng công đoạn.'
         ],
       },
     ],
@@ -208,14 +200,22 @@ export const projects: Project[] = [
     objective: 'Trình bày bộ nguyên tắc cá nhân về sử dụng AI trong môi trường học thuật, đảm bảo tính toàn vẹn học thuật và chất lượng kỹ thuật.',
     sections: [
       {
-        heading: 'Bộ nguyên tắc cá nhân',
+        heading: 'Thực tế áp dụng AI trong hệ thống Đấu giá Online',
         items: [
-          '<span class="font-mono text-orange-600">Think First, Prompt Later:</span> Tự vẽ UML và định hình kiến trúc trước khi dùng AI — AI là trợ lý, không phải người thiết kế.',
-          '<span class="font-mono text-orange-600">Quy tắc giải thích 100%:</span> Không giữ lại bất kỳ dòng code nào (ví dụ: <span class="font-mono text-sky-600">ReentrantLock</span>) nếu không tự giải thích được cơ chế hoạt động.',
-          '<span class="font-mono text-orange-600">Active Refactoring:</span> Không copy-paste mù quáng; phải tái cấu trúc theo <span class="text-sky-600">Google Java Style Guide</span>.',
-          '<span class="font-mono text-orange-600">Independent Verification:</span> Kiểm chứng đề xuất phức tạp bằng tài liệu Official hoặc Unit Test.',
-          '<span class="font-mono text-orange-600">Data Privacy:</span> Chỉ cung cấp pseudo-code hoặc error stack trace khi debug — bảo mật kiến trúc nội bộ.',
-          '<span class="font-mono text-orange-600">Minh bạch Trích dẫn:</span> Khai báo rõ ràng phần đóng góp của AI trong báo cáo và tài liệu kỹ thuật.',
+          '<strong>Tối ưu Database xuất sắc:</strong> AI đã tư vấn chính xác việc sử dụng <span class="text-emerald-600 font-medium">Composite Index</span> trên MySQL InnoDB, đáp ứng hoàn hảo yêu cầu truy xuất giá thầu (Bid) tốc độ cao của hệ thống.',
+          '<strong>Nhận diện mã độc & Lỗi đa luồng:</strong> Chức năng cập nhật Realtime do AI đề xuất sử dụng List thuần đã gây ra lỗi <span class="font-mono text-red-500">ConcurrentModificationException</span>. Sinh viên đã phải tự debug và thiết kế lại bằng <span class="font-mono text-sky-600">CopyOnWriteArrayList</span> và ThreadPool riêng biệt.',
+          '<strong>Xử lý Race Condition:</strong> Tình huống hóc búa nhất là code AI sinh ra thiếu khối lệnh <span class="font-mono text-orange-600">try-finally</span> khi thao tác với Lock trong môi trường đấu giá đồng thời, tiềm ẩn nguy cơ khóa chết hệ thống (Deadlock). Khối mã này đã bị loại bỏ và viết lại thủ công hoàn toàn.'
+        ],
+      },
+      {
+        heading: 'Bộ 6 nguyên tắc kỹ sư cá nhân',
+        items: [
+          '<span class="text-orange-600 font-medium">Think First, Prompt Later:</span> Tuyệt đối không dùng AI để bắt đầu từ con số không. Phải có sẵn bản vẽ UML và ý tưởng luồng dữ liệu trước khi đặt câu hỏi.',
+          '<span class="text-orange-600 font-medium">Quy tắc giải thích 100%:</span> Bất kỳ dòng lệnh nào (đặc biệt là xử lý Concurrent) đưa vào dự án đều phải được hiểu cặn kẽ. Không hiểu = Xóa bỏ.',
+          '<span class="text-orange-600 font-medium">Active Refactoring:</span> Chống lại sự cám dỗ của việc Copy-Paste mù quáng. Bắt buộc phải gõ lại và tái cấu trúc mã theo chuẩn Google Java Style Guide.',
+          '<span class="text-orange-600 font-medium">Independent Verification:</span> Coi mọi thông tin AI đưa ra là "có thể sai". Luôn đối chiếu chéo các thư viện phức tạp qua Unit Test (JUnit) độc lập.',
+          '<span class="text-orange-600 font-medium">Data Privacy (Bảo mật):</span> Tuyệt đối không đẩy toàn bộ mã nguồn nội bộ của dự án lên nền tảng AI công cộng, chỉ cung cấp mã giả (pseudo-code) để hỏi thuật toán.',
+          '<span class="text-orange-600 font-medium">Transparent Disclosure:</span> Trung thực minh bạch trong học thuật. Khai báo rõ ràng các module đã nhờ AI phản biện, khẳng định quyền làm chủ sản phẩm cuối cùng.'
         ],
       },
     ],
