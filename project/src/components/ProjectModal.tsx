@@ -24,16 +24,16 @@ export default function ProjectModal({ project, onClose }: Props) {
       style={{ background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(6px)' }}
       onClick={(e) => e.target === e.currentTarget && onClose()}
     >
-      <div className="modal-panel relative max-h-[90vh] w-full max-w-2xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl">
+      <div className="modal-panel relative max-h-[90vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-slate-200 bg-white shadow-2xl">
         {/* Header */}
-        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 rounded-t-2xl border-b border-slate-200 bg-white px-6 py-5">
+        <div className="sticky top-0 z-10 flex items-start justify-between gap-4 rounded-t-2xl border-b border-slate-200 bg-white px-8 py-6">
           <div className="flex items-center gap-3 min-w-0">
             <div className={`flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gradient-to-br ${project.gradient}`}>
               <project.icon size={20} className="text-white" />
             </div>
             <div className="min-w-0">
-              <p className="font-mono text-xs text-slate-500">{project.badge}</p>
-              <h2 className="text-base font-semibold text-slate-900 leading-snug">{project.title}</h2>
+              <p className="font-mono text-sm text-slate-500 mb-1">{project.badge}</p>
+              <h2 className="text-xl font-bold text-slate-900 leading-snug">{project.title}</h2>
             </div>
           </div>
           <button
@@ -45,26 +45,26 @@ export default function ProjectModal({ project, onClose }: Props) {
         </div>
 
         {/* Body */}
-        <div className="px-6 py-6 space-y-6">
+        <div className="px-8 py-8 space-y-8">
           {/* Objective */}
           <div>
-            <h3 className="mb-2 text-xs font-medium uppercase tracking-widest text-sky-600 font-sans">
+            <h3 className="mb-3 text-sm font-semibold uppercase tracking-widest text-sky-600 font-sans">
               Mục tiêu
             </h3>
-            <p className="text-sm leading-relaxed text-slate-700">{project.objective}</p>
+            <p className="text-base leading-relaxed text-slate-700">{project.objective}</p>
           </div>
 
           {/* Content sections */}
           {project.sections.map((sec, i) => (
             <div key={i}>
-              <h3 className="mb-3 text-xs font-medium uppercase tracking-widest text-orange-600 font-sans">
+              <h3 className="mb-4 text-sm font-semibold uppercase tracking-widest text-orange-600 font-sans">
                 {sec.heading}
               </h3>
               {sec.items ? (
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {sec.items.map((item, j) => (
-                    <li key={j} className="flex gap-3 text-sm text-slate-700">
-                      <span className="mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-sky-500" />
+                    <li key={j} className="flex gap-3 text-base text-slate-700">
+                      <span className="mt-2 h-2 w-2 flex-shrink-0 rounded-full bg-sky-500" />
                       <span
                         dangerouslySetInnerHTML={{ __html: item }}
                         className="leading-relaxed"
@@ -73,7 +73,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                   ))}
                 </ul>
               ) : sec.code ? (
-                <pre className="overflow-x-auto rounded-lg border-l-4 border-slate-300 bg-slate-100 p-4 font-mono text-xs leading-relaxed text-slate-800 shadow-inner">
+                <pre className="overflow-x-auto rounded-lg border-l-4 border-slate-300 bg-slate-100 p-5 font-mono text-sm leading-relaxed text-slate-800 shadow-inner">
                   {sec.code}
                 </pre>
               ) : null}
@@ -82,9 +82,9 @@ export default function ProjectModal({ project, onClose }: Props) {
 
           {/* Tags */}
           {project.tags && (
-            <div className="flex flex-wrap gap-2 pt-2">
+            <div className="flex flex-wrap gap-2 pt-4">
               {project.tags.map((t) => (
-                <span key={t} className="tag text-xs px-2.5 py-1 bg-slate-100 text-slate-600 rounded-md border border-slate-200">{t}</span>
+                <span key={t} className="tag text-sm px-3 py-1.5 bg-slate-100 text-slate-600 rounded-md border border-slate-200">{t}</span>
               ))}
             </div>
           )}
@@ -127,7 +127,7 @@ export default function ProjectModal({ project, onClose }: Props) {
                 rel="noopener noreferrer"
                 className={`btn-shine-effect relative z-0 flex cursor-pointer items-center justify-center overflow-hidden rounded-[10px] border bg-white px-[35px] py-[17px] no-underline outline-none transition-all duration-300 ease-[cubic-bezier(0.02,0.01,0.47,1)] after:absolute after:-left-[75px] after:-top-[50px] after:-z-10 after:h-[155px] after:w-[50px] after:rotate-[35deg] after:opacity-40 after:transition-all after:duration-[550ms] after:ease-[cubic-bezier(0.19,1,0.22,1)] hover:after:left-[120%] ${project.btnBorder} ${project.btnText} ${project.btnShine}`}
               >
-                <span className={`relative z-20 flex items-center gap-2 text-[14px] font-medium uppercase tracking-[0.7px] ${project.btnTextHover}`}>
+                <span className={`relative z-20 flex items-center gap-2 text-[16px] font-bold uppercase tracking-[0.7px] ${project.btnTextHover}`}>
                   <FileText size={20} />
                   Xem Báo Cáo Chi Tiết
                 </span>
