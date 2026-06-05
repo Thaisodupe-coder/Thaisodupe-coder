@@ -5,9 +5,10 @@ import type { Project } from '../data/projects';
 interface Props {
   project: Project;
   onClose: () => void;
+  isInline?: boolean;
 }
 
-export default function ProjectModal({ project, onClose }: Props) {
+export default function ProjectModal({ project, onClose, isInline }: Props) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -20,6 +21,7 @@ export default function ProjectModal({ project, onClose }: Props) {
   };
 
   useEffect(() => {
+    if (isInline) return;
     const onKey = (e: KeyboardEvent) => e.key === 'Escape' && onClose();
     document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
@@ -31,11 +33,15 @@ export default function ProjectModal({ project, onClose }: Props) {
 
   return (
     <div
-      className="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4"
-      style={{ background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(6px)' }}
-      onClick={(e) => e.target === e.currentTarget && onClose()}
+      className={
+        isInline
+          ? 'w-full mb-10 mx-auto max-w-4xl'
+          : 'modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4'
+      }
+      style={isInline ? {} : { background: 'rgba(15,23,42,0.6)', backdropFilter: 'blur(6px)' }}
+      onClick={(e) => !isInline && e.target === e.currentTarget && onClose()}
     >
-      <div className="modal-panel relative flex flex-col max-h-[90vh] w-full max-w-4xl overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl">
+      <div className={`modal-panel relative flex flex-col w-full max-w-4xl overflow-hidden rounded-2xl border border-slate-200 bg-white ${isInline ? 'shadow-lg' : 'shadow-2xl max-h-[90vh]'}`}>
         {/* Header */}
         <div className="z-10 flex items-start justify-between gap-4 border-b border-slate-200 bg-white/95 px-8 py-6 backdrop-blur shadow-sm">
           <div className="flex items-center gap-3 min-w-0">
@@ -50,26 +56,30 @@ export default function ProjectModal({ project, onClose }: Props) {
             </div>
           </div>
           <div className="flex items-center gap-3 flex-shrink-0">
-            <button
-              onClick={scrollToBottom}
-              className={`group flex items-center gap-2 rounded-full bg-gradient-to-r ${project.gradient} px-4 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:scale-95`}
-              title="Cuộn xuống cuối trang"
-            >
-              <ArrowDown size={16} className="group-hover:animate-bounce" />
-              Cuộn xuống
-            </button>
-            <button
-              onClick={onClose}
-              className="flex-shrink-0 rounded-full border border-slate-200 bg-slate-50 p-2 text-slate-500 transition-all duration-300 hover:bg-red-50 hover:border-red-200 hover:text-red-500"
-              title="Đóng"
-            >
-              <X size={18} />
-            </button>
+            {!isInline && (
+              <>
+                <button
+                  onClick={scrollToBottom}
+                  className={`group flex items-center gap-2 rounded-full bg-gradient-to-r ${project.gradient} px-4 py-2 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 hover:shadow-lg active:scale-95`}
+                  title="Cuộn xuống cuối trang"
+                >
+                  <ArrowDown size={16} className="group-hover:animate-bounce" />
+                  Cuộn xuống
+                </button>
+                <button
+                  onClick={onClose}
+                  className="flex-shrink-0 rounded-full border border-slate-200 bg-slate-50 p-2 text-slate-500 transition-all duration-300 hover:bg-red-50 hover:border-red-200 hover:text-red-500"
+                  title="Đóng"
+                >
+                  <X size={18} />
+                </button>
+              </>
+            )}
           </div>
         </div>
 
         {/* Body (Phần này sẽ là phần cuộn riêng biệt) */}
-        <div ref={scrollRef} className="overflow-y-auto px-8 py-8 pb-28 space-y-8">
+        <div ref={scrollRef} className={isInline ? 'px-8 py-8 space-y-8' : 'overflow-y-auto px-8 py-8 pb-28 space-y-8'}>
           {/* Objective */}
           <div>
             <h3 className="mb-3 text-sm font-semibold uppercase tracking-widest text-sky-600 font-sans">
